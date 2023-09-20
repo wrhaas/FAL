@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
   <body>
     <img src="FAL_banner.png" alt="FAL banner">
