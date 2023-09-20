@@ -1,7 +1,7 @@
 <html>
   <body>
 <H1>Publications</H1>
-(click title for pdf and doi for publisher page)
+    <p>(click title for pdf and doi for publisher page)</p>
 Snyder, Thomas J. and Randall Haas
 2023 <a href="https://fcl.ucdavis.edu/wp-content/uploads/sites/532/2023/06/Snyder2023.pdf" target="_bank" rel="noopener">Climate change intensified violence in the south-central Andean highlands from 1.5 to 0.5 ka</a>. <i>Quaternary Research</i>. doi:<a href="https://www.doi.org/10.1017/qua.2023.23" target="_bank" rel="noopener">10.1017/qua.2023.23</a>
 
