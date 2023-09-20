@@ -1,3 +1,5 @@
+<html>
+  <body>
 <H1>Publications</H1>
 (click title for pdf and doi for publisher page)
 Snyder, Thomas J. and Randall Haas
@@ -118,3 +120,5 @@ Haas, Randall
 
 Haas, Randall
 2002<a href="http://fclab.faculty.ucdavis.edu/wp-content/uploads/sites/532/2018/06/The-Basketmaker-II-Fiber-Industry-of-Boomerang-Shelter-Southeastern-Utah-A-Synthesis-of-Cordage-Morphology-Analysis-and-Experimentation.pdf" target="_blank" rel="noopener"> Basketmaker II fiber industry of Boomerang Shelter, Utah: A Synthesis of Archaeological Data Analysis and Experimentation</a>. <em>Kiva</em> 67:167-185.
+</body>
+</html>
