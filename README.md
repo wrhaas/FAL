@@ -3,7 +3,7 @@
     <img src="FAL_banner.png" alt="FAL banner">
     <p><table width="100%" border="0" align="center">
       <tr>
-        <td align="center"><a href="README.html" style="text-decoration:none; font-weight:bold; color:gray">home</a></td>
+        <td align="center"><a href="README" style="text-decoration:none; font-weight:bold; color:gray">home</a></td>
         <td align="center"><a href="publications.md" style="text-decoration:none; font-weight:bold; color:gray">publications</a></td>
         <td align="center"><a href="=resources.html" style="text-decoration:none; font-weight:bold; color:gray">resources</a></td>
         <td align="center"><a href="affiliates.md" style="text-decoration:none; font-weight:bold; color:gray">members and affiliates</a></td>
