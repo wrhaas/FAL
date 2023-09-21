@@ -1,0 +1,349 @@
+<p><img src="../images/FAL_logo150.png" height="100" align="left" alt="FAL logo 150" style="padding-right: 10px; padding-bottom: 10px;"></p>
+<h1>How to draft a professional archaeology article manuscript using LibreOffice Writer</h1>
+
+<p>Before you begin, have a look at this pdf output of the sample manuscript that you will produce in this tutorial: <a href="TutorialManuscript/Sample.pdf" target="_blank">sample manuscript</a>. If you (a) agree that this sample is nicely formatted, (b) know that you will be regularly drafting manuscripts and reports throughout your career, and (c) are willing to consider that it can be accomplished relatively easily, then this tutorial makes sense for you. I encourage you to continue.</p>
+
+<p>Manuscript preparation is an essential part of archaeological practice. Academic and applied archaeologists routinely prepare manuscripts for professional publication and report activities to various agencies. There are many tools for preparing such manuscripts. One that is particularly useful is the <a href="https://www.libreoffice.org/" target="_blank">LibreOffice</a> suite&ndash;particularly it's word-processing utility called LibreOffice Writer. Not only is it free and open-source, unlike the Microsoft Suite, it also offers powerful tools for formatting, integrating tables and figures, interfacing with bibliography management software, edit management, and pdf output. It can furthermore be operated offline, unlike cloud-based applications such as Google Docs. This feature is particularly handy for archaeologists working in remote settings without internet connection.</p>
+
+<p>As a university professor, I have had to dedicate inordinate amounts of time to helping students with basic word processing at the expense of substantive instruction in archaeology. I have furthermore found that the problem seems to be getting worse as students become increasingly dependent on cloud-based applications. This is not the students' fault. It's simply the world we live in. I have therefore developed this tutorial to introduce students to an intuitive and powerful approach to manuscript production. By working through this tutorial, you will learn key features to streamline the process of drafting archaeolgical publications, theses, disserations, and professional reports. For the most part, the examples conform to the <a href="https://www.saa.org/publications/american-antiquity" target="_blank"><i>American Antiquity</i></a> style guide, which is a commonly used format used for archaeological publication in North and South America.</p>
+
+<h1>Installation</h1>
+<p>To complete this tutorial, you must install LibreOffice on your computer. LibreOffice is available for Windows, Mac, and Linux operating systems. Follow the installation instructions provided on the <a href="https://www.libreoffice.org/" target="_blank">LibreOffice</a> website. Instructions will vary by operating system and version. This tutorial is based on LibreOffice version 7.5.0. This tutorial is furthermore produced on linux <a href="https://ubuntu.com/" target="_blank">Ubuntu</a> 20.04 operating system, which may entail small (but sometimes frustrating) differences for users working with Mac or Windows operating systems. </p>
+
+<p>This tutorial focuses on document formatting and output. Data management, image editing, and bibliography management are related topics that are covered in separate tutotirals, and require installation of other software packages.</p>
+
+<h1>Using LibreOffice Writer Step-by-Step</h1>
+To introduce LibreOffice Writer, this tutorial presents step-by-step instructions for producing a sample document that meets many of the stylistic conventions for archaeological reporting. In case you didn't catch it in the introduction, here is the product that you will produce by the end of this tutorial: <a href="TutorialManuscript/Sample.pdf" target="_blank">sample manuscript</a>.
+<h2>Opening a new document</h2>
+<ol>
+  <li>Open LibreOffice. Use your favorite method, typically double-click on the LibreOffice icon on your Desktop or other location. I prefer to open a command line terminal and enter <code>libreoffice</code>. This may seem silly, but it is actually the fastest way to open the software once you get used to it. Whatever approach you take, the following screen will appear:
+    <br><img src="TutorialManuscript/StartPage.png" alt="LOW opening screen">
+  </li>
+  <li>Click the "Writer Document" button to open a new document. You should see a white page ready for you to draft your thoughts.</li>
+</ol>
+<h2>Pre-formatting the document</h2>
+Whenever starting a new document, the first thing I do is establish some basic formatting parameters. This typically includes setting the page size, margins, and header. You can do this later, but doing it earlier can spare you formatting troubles down the line.
+<ol>
+  <li>In the upper File menu bar, click "Format" and select "Page Style". A window will appear with page formatting options.</li>
+  <li>Click on the "Page" tab, and make the following settings:
+    <ul>
+      <li>Format: Letter</li>
+      <li>Orientation: Portrait</li>
+      <li>Margins: set all to 1 inch or 2.54 cm (depending on your units). Feel free to use different margins sizes as your preferences or standards dictate. 1 inch margins is a common standard.</li>
+      <li>Click "ok" to accept the settings.</li>
+    </ul>
+  <li>Click somewhere near the top of your document page. You will see a blue "Header (Default Style)" button appear.</li>
+  <li>Click that blue Header button. A text entry box should appear at the top of your document. This is your manuscript header. Whatever you enter in this box will appear on every page of your document, or every-other page if you prefer. Note, that you can similarly add a "footer" to the bottom of the document, but we will not do that here.</li>
+  <li>Enter "My Manuscript" into the header text box.</li>
+  <li>Hit your tab button on your keyboard twice to move your cursor to the right of the text box. Note that the header has two pre-set tabs&ndash;a center tab and a right tab. This tab structure allows you to include left-algined, centered, and right-aligned header text.</li>
+  <li>Type your last name followed by a space.</li>
+  <li>Insert the page number as follows: click "Insert" on the File menu bar, and select "Page Number." A gray box with "1" will appear. The gray box tells you that this is a dynamic element. The page numbers will be different for each page and will automatically update as you add pages. The gray box will not appear when you print or export the document.</li>
+  <li>Now let's add the number of pages in the document. Make sure your cursor is after the page number, type " of " (note the spaces).</li>
+  <li>click "Insert" on the File menu bar, and select "Field" and "Number of Pages." A second gray box with "1" will appear. As you add more pages to the document, this number will automatically update.</li>
+  <li>Let's take a moment to save your document. You can simply click "File" from the File menu bar and select, "Save As". Alternatively, you can use the keyboard shortcut, "Ctrl+s" (holding down the Ctrl key, hit the letter "s"). I highly recommend using this keystroke shortcut and making it a regular habit to use it periodically while drafting a document. Getting into this habit will reduce the chances of catastrophic data loss (though, LibreOffice does have a robust document recovery system).</li>  
+  <li>Your pre-formatted document should look as follows:
+    <br><img src="TutorialManuscript/Preformat.png" alt="LOW Pre-formatting">
+    <br>Note that you typically do not want to show the header on the first page of the document. We will address this in a later step.
+  </li>
+</ol>
+<h2>Title Page</h2>
+Many documents require a title page. We will format a title page that conforms to <i>American Antiquity</i> style.
+<ol>
+  <li>Click somewhere in the document to place your cursor, and type "How to draft an archaeology manuscript with LibreOffice".</li>
+  <li>Let's format the text. Make sure the text formatting toolbar is visible by clicking "View" in the File menu bar, selecting "Toolbars," and making sure that "Formatting" is selected. The Formatting toolbar looks like this:
+    <br><img src="TutorialManuscript/FormattingToolbar.png" alt="align button"></li>
+  <li>Center the text by finding and clicking the "Align Center" button in the Formatting toolbar.</li>
+  <li>Make the font bold by selecting the text and using the keystroke, "Ctrl+b". ou can also click the large "B" in the Formatting toolbar.</li>
+  <li>With your cursor at the end of the line, disable the bold text, and hit enter 15 times to move your cursor to the center of the page. Sometimes it is convenient to see hidden characters in your document. Click the "Formatting Marks" button located in the Standard Toolbar, which looks as follows: <img src="TutorialManuscript/paragraph.png" alt="paragraph mark">. You will now see a series of non-printing, blue paragraph symbols running down the page. You can turn the formatting marks off and on as needed.</li>
+  <li>Type your name as you would want it to appear on the manuscript.</li>
+  <li>Hit enter 5 times.</li>
+  <li>Type, "Do not cite in any context without permission of the author"</li>
+  <li><i>American Antiquity</i> requires that this text is all caps. Select that text, right click on your selection, and select "Character-Character". A pop-up window will appear.</li>
+  <li> Select the Font Effects tab, and "Capitals" from the Case dropdown options, and click "OK".</li>
+  <li>Hit enter ten more times, and type your name (in bold), affiliation, affiliation address, and email address (see example below). Note that the all-caps formatting carried over from the previous step. You should select your text, and repeat the previous two formatting steps selecting "(Without)" from the Case dropdown.</li>.
+  <li>Left justify this text by placing your cursor somewhere in this paragraph and clicking on the "Align Left" button in the Formatting toolbar.</li>
+  <li>Hit enter five more time, and type, "Competing Interests: The author declares none."</li>
+  <li>This is the last piece of required information for the title page. Insert a page break by clicking Insert in the File menu bar and selecting Page Break. Page 2 will be created. Page breaks are extremely useful. Avoid the temptation to just hit enter a bunch of times to start the next page. Page Break will save you formatting headaches down the line.</li>
+  <li>Now that we have a second page, you can see how the header has carried over and automatically updated the page numbers. Let's remove the header from the first page by clicking the blue Header button and selecting Format Header.</li>
+  <li>In the Header tab of the pop-up window, deselect "Same content on first page" and click "OK" to exit.</li>
+  <li>Now select your header text in the first page, and delete it. Notice that the text only disappears from page 1 but remains on page 2. It will also appear on all subsequent pages.</li>
+  <li>Your title page should look as follows:
+    <br><img src="TutorialManuscript/title.png" alt="title page">
+    </li>
+</ol>
+
+<h2>Adding and formatting text</h2>
+
+In this section, you will add an abstract and manuscript text organized by header-delineated sections.
+<ol>
+  <li>
+    Visit <a href="https://loremipsum.io/" target="_blank">https://loremipsum.io/</a> to generate and copy one paragraph of random Latin text.</li>
+  <li>
+    On page 2 of your document, right click in the main text area, and select Paste Special, Unformatted Text.  Paste Special removes hidden formatting from the source, thus pasting plain text in your document. Your abstract is done and properly formatted for <i>American Antiquity</i>.
+  </li>
+  <li>
+    Notice that the newly pasted text has red underlining. This is your spell checker telling you that there are spelling errors. Tell LibreOffice that this text is Latin by placing your cursor somewhere in the paragraph, clicking Tools in the File menu bar and selecting Language for Paragraph, Latin. The red lines will disappear.
+  </li>
+  <li>
+    Place your cursor at the end of the abstract paragraph, and insert a page break following the instructions in the Title Page section above. This will create page 3 in your document.
+  </li>
+  <li>
+    On page three, type, "Introduction", and enter to start a new paragraph.
+  </li>
+  
+  <li>
+    Copy and paste (special) three more paragraphs from <a href="https://loremipsum.io/" target="_blank">https://loremipsum.io/</a> into the new paragraph on page 3.
+  </li>
+  <li>
+    Let's format the Introduction header to set it apart from the paragraph text. To do this efficiently, we will apply a style. With your cursor somewhere in the word, Introduction, navigate to the "Set Paragraph Style" dropdown button in the Formatting Toolbar. Select "Heading 1".
+  </li>
+  <li>
+    Your text will be bold and nicely spaced, but the font will be different. Right click on "Introduction" and select Paragraph, Edit Style.
+  </li>
+  <li>
+    In the font tab of the pop-up window, select "Liberation Serif" for the Family, Bold for the Style, and enter 12 pt for the Size. Note that 12 pt font is a common font size.
+  </li>
+  <li>
+    Toggle to the Alignment tab, select the "Center" option, and click "OK" to exit. Your header should now be properly formatted. You may wonder why we wouldn't want to simply format this text directly rather than using this seemingly cumbersome Paragraph Style approach. Stay with me...the utility of this approach will become clear in later steps.
+  </li>
+  <li>
+    Let's format the body text now. Notice that the body text takes a "Default Style." Select your new paragraphs, and set them to the "Text Body" style.
+  </li>
+  <li>
+    You may have to redo the Latin language setting.
+  </li>
+  <li>
+    I'm not a fan of the text body spacing, so let's change it. Right click somewhere on one of the paragraphs, select Paragraph, Edit Style.
+  </li>
+  <li>
+    In the Indents and Spacing tab, check the Automatic Button (this indents the firs line of each paragraph), set Above and Below paragraph to 0.00, and set Line Spacing to Single. Your text body paragraphs are now nicely formatted.
+  </li>
+  <li>
+    Notice that there are still spaces between the paragraphs despite setting the spacing to 0.00. Click the Formatting Marks button in the Formatting toolbar. Notice that there are paragraph breaks between the Lorem Ipsum paragraphs. Delete those.
+  </li>
+  <li>
+    Apply Text Body formatting to your abstract by placing your cursor somewhere in the abstract and select Text Body from the Formatting dropdown.
+  </li>
+  <li>
+    Move your cursor to the end of your text, and enter down to a new line.
+  </li>
+  <li>
+    Type, "Materials and Methods".
+  </li>
+  <li>
+    With your cursor in the same line, select Header 1 from the Set Paragraph Style dropdown in the Formatting toolbar. Your Materials and Methods header should now be properly formatted with a single button click.
+  </li>
+  <li>
+    Enter down to a new paragraph, and paste (special) five new paragraphs of lorem ipsum text.
+  </li>
+  <li>
+    If this new text did not inherit the Text Body style, select your new paragraphs, and then select the Text Body style from the Formatting dropdown. Delete all parapgraph breaks between the new paragraphs.
+  </li>
+  <li>
+    Let's add three sub-sections to the Materials and Methods section. Between the first and second paragraphs of the Materials and Method section, add line called "Site Information".
+  </li>
+  <li>
+    Apply the Heading 2 style to this line following the previous instructions for applying headings.
+  </li>
+  <li>
+    Heading 2 format, does not conform to <i>American Antiquity</i> sub-section style. So update the style to be italicized, Liberation Serif, 12 pt font following the previous instructions for formatting styles.</li>
+  <li>
+    Now skip two paragraphs and add a sub-section called, "Material Correlates", and apply Heading 2 style.
+  </li>
+  <li>
+    Add and properly format the following sections: Results, Conclusion, and References Cited. For the Results and Conclusions sections, add three paragraphs of Lorem Ipsum text each and apply the Text Body format to those. Your formatted paragraphs and headers should look something like this:
+    <br><img src="TutorialManuscript/paragraphs.png" alt="paragraph format">
+  </li>
+</ol>
+<h2>References Cited</h2>
+In the previous section, you added a References Cited header and properly formatted the header. Now we'll manually add some in-text citations and associated references to the References Cited section. In another tutorial, I show how to automatically generate References Cited using a bibliography management tool. However, before going down that path, it is essential to learn how to manually formate a bibliography because if you don't know how to do that, you won't know when your bibliography manager has made a mistake, which they often do.
+
+<p>Before we start, note that <i>American Antiquity</i> formatting for the References Cited section can be a bit tricky. We will use a slightly simplified version here, which has proven acceptable for submission to the journal in my experience.</p>
+
+<ol>
+  <li>Let's suppose that we wish to cite an article in support of our first sentence in paragraph 2 of the introduction. Add the following text at that location: (Ashmore 1991).</li>
+  <li>Now let's add that reference to the References Cited section. Enter down one line from the References Cited header, and type "Ashmore, Wendy"</li>
+  <li>Enter down to the next line, and type, "1991 Site-Planning Principles and Concepts of Directionality among the Ancient Maya. Latin American Antiquity 2:199–226." If you decide to copy and paste, be sure to paste special. You've now entered your first bibliographic entry. </li>
+  <li>If your entry has inherited the Text Body format, you'll notice the indentation isn't right. Let's make a simple paragraph style for <i>American Antiquity</i> reference formatting. With your cursor somewhere in the Ashmore reference, right click, and select Paragraph, Paragraph (do not choose Edit Style in this case).</li>
+  <li>In the Indents and Spacing tab of the pop-up window, deselect Automatic, to remove first-line indenting.</li>
+  <li>With the indentation removed and your cursor in the same paragraph, click Styles in the File menu bar, and select "New Style from Selection."</li>
+  <li>In the pop-up window, call it AQ reference".</li>
+  <li>Apply this style to both parts of the Ashmore reference.</li>
+  <li>Now cite the following two references somewhere in the text body, and add them to your References Cited in alphabetical order:
+    <ul>
+      <li>Hampton, David R., Charles E. Summer, and Ross A. Weber 1978 Organizational Behavior and the Practice of Management. 3rd ed. Scott Foresman, Glenview, Illinois.</li>
+      <li>Manzanilla, Linda 1999 The Emergence of Complex Urban Societies in Central Mexico: The Case of Teotihuacan. In Archaeology in Latin America, edited by Gustavo G. Politis and Benjamin Alberti, pp. 93–129. Routledge, London.</li>
+    </ul>
+    Note that in-text citations with more than two authors take the following form: (Hampton et al. 1978), or Hampton et al. (1978), as the case may be.
+  </li>
+  <li>Be sure to italicize journal and book titles per <i>American Antiquity</i> style.</li>
+</ol>
+<h2>Adding a Table of Contents</h2>
+This is where header formatting really pays off. For professional articles, you don't need a table of contents. However, they are often required for theses and dissertations and useful for reports. If you haven't already done so, be sure to execute the steps outlined in the "Adding and formatting text" section above. This automated table-of-contents procedure will not work otherwise.
+<ol>
+  <li>
+    Let's add a table of contents after the title page and before the abstract. Place your cursor at the beginning of the abstract, and insert a page break (Insert, Pagebreak in the File menu bar).
+  </li>
+  <li>Place your cursor in the newly created empty page between the title and abstract pages.
+  </li>
+  <li>
+    In the File menu bar, click Insert, Table of Contents, Table of Contents. A pop-up window will appear.
+  </li>
+  <li>
+    In the Type tab, change "Table of Contents" to "Contents". This is just a stylistic preference (we know its a table, so why do we need to say it?)
+  </li>
+  <li>
+    Click OK. A nicely formatted table of contents will appear.
+  </li>
+  <li>
+    Notice that the font of "Contents" isn't the same as that of the rest of our document. Let's fix that. Right click somewhere on the table of contents, and select, Edit Index.
+  </li>
+  <li>
+    In the Styles tab of the pop-up window, select Title under Assignment window, and then double click Heading 1 in the Paragraph Styles window. The Title style will update to the Heading 1 style.
+  </li>
+  <li>
+    Click OK, and you should see that "Contents" now shares the same format as your primary headers.
+  </li>
+  <li>Oh no...our table of contents doesn't specify the Abstract! Let's fix that. Add a line above your abstract, and type "Abstract."
+  </li>
+  <li>
+    Apply the Heading 1 style to the Abstract header by slecting Heading 1 from the Set Paragraph Style dropdown in the Formatting toolbar.
+  </li>
+  <li>
+    Right click on your table of contents, and select Update index. Abstract should now appear in your table. Whenever you update your document, you should update the table of contents in this way to ensure accuracy.
+  </li>
+  <li>You now have a table of contents that should look as follows:
+    <br><img src="TutorialManuscript/toc.png" alt="table of contents">
+  </li>
+</ol>
+
+<h2>Adding Figures</h2>
+Adding imagery to a LibreOffice Writer document is easy. However, the addition of many images can lead to a number of management and formattng challenges. This section presents an approach that will help you avoid many of those challenges.
+<ol>
+  <li>
+    Suppose that you want to add a nice photo of the excavation you're writing about, and you want to reference it on page 4 and appear on page 5. Start by placing your cursor somewhere near the top of page 5.
+  </li>
+  <li>
+    From Insert in the File menu bar, select Image, navigate to and select the file called excavation.png located in the tutorial folder.
+  </li>
+  <li>
+    Click Open. The image will appear in your document, but strangely wrapped with text. Let's format it more nicely and add a caption.
+  </li>
+  <li>
+    Right click on the image, and select Insert Caption.
+  </li>
+  <li>
+    In the pop-up window, enter/select the following:
+    <ul>
+      <li>Caption: Excavation at the archaeological site reported here.</li>
+      <li>Category: Figure (you may have to type it)</li>
+      <li>Separator: .  (make sure to add a space after the period)</li>
+      <li>Position: below</li>
+    </ul>
+  </li>
+  <li>
+    Click OK.
+  </li>
+  <li>
+    A gray box will appear around your image and caption. Double click that gray frame. Be sure to position precisely over the frame line and not to accidentally select the image itself. A settings window will appear.
+  </li>
+  <li>
+    In the Type tab, set the Anchor To page and the vertical to Top to Page Text Area. This will anchor the figure frame to page 5, align it to the top of the page, and prevent any text overlap.
+  </li>
+  <li>
+    In the Wrap tab, set the wrap type to None and the bottom spacing to 0.5 inches.
+  </li>
+  <li>
+    Click OK. Your figure is nicely formatted and will stay put even as you edit your text. Notice that the 1 in Figure 1 is dynamic text with a gray box. This will update automatically if your fiure order changes.
+  </li>
+  <li>Let's add an in-text citation of the figure. Somewhere on page 4, type "(Figure )". Don't enter the figure number.
+  </li>
+  <li>Place your cursor before the right parentheses, and select Insert Cross reference from the File menu bar.
+  </li>
+  <li>
+    In the pop-up window, select Figure from the Type window, numbering from the Insert reference to window, and Figure 1 from the Selection window.
+  </li>
+  <li>
+    Click Insert once and then Close. You should now see "(Figure 1)" in your document with the 1 as a dynamic element. Let's add a second image, which will show why this is important.
+  </li>
+  <li>
+    Suppose you wish to add a map and reference to the map to page 4. Place your cursor somewhere on page 4, and follow the instructions above to insert an image, but this time, select "map.png".
+  </li>
+  <li>
+    Follow the instructions to add a Figure caption, and enter "Site location map." for the caption text.
+  </li>
+  <li>
+    Format the figure frame so that it is anchored to the page and placed in the lower right corner of the page text area. Set the wrap to Before. You can adapt the instructions for formatting the previous figure above to accomplish this formatting. You'll want to add some spacing to the top and left sides. 
+  </li>
+  <li>
+    Take a look at the first figure you added and it's in-text citation. Notice that they now indicate Figure 2. The figure numbers have updated automatically. Your figures should look something like this:
+    <br><img src="TutorialManuscript/figs.png" alt="figures">
+    <br>Note that your page numbers will have changed, so you'll want to update you table of contents per the instructions above.
+  </li>
+</ol>
+
+<h2>Adding Tables</h2>
+Adding tables to LibreOffice Writer entails many of the same steps as adding figures. But there are some differences. We will use frames and automatic captioning again, but the steps are slightly different. We will format the table according to <i>American Antiquity</i> guidelines.
+<p>Suppose the we have the following data that we wish to reference in the results section and display on the same or following page:
+  <ul>
+    <li>Site A, 12 ceramics, 90 lithics, 105 strucures, Late Period</li>
+    <li>Site B, 0 ceramics, 1412 lithics, 2 strucures, Early Period</li>
+    <li>Site C, 125 ceramics, 160 lithics, 25 strucures, Middle Period</li>
+    <li>Site D, 10 ceramics, 10,365 lithics, 3 strucures, Middle Period</li>
+  </ul>
+  Let's create a data table and in-text citation of it.
+</p>
+<ol>
+  <li>
+    Place your cursor near the top of page 7, and Insert a Frame from the File menu bar. A pop-up window will appear.
+  </li>
+  <li>
+    Set the Width Relative to Paragraph area at 100%, anchor to page, and set the Position to Center and Top relative to Page text area.
+  </li>
+  <li>
+    Click OK. A black-lined frame will appear.
+  </li>
+  <li>
+    Place you cursor inside the Frame, and select Table, Insert Table from the File menu bar. A pop-up window will appear.
+  </li>
+  <li>
+    Set the number of Columns to 5 and rows to 5 in order to accomodate all of our data, and click Insert. A table will appear.
+  </li>
+  <li>
+    Enter the data from above with the first row as column names.
+  </li>
+  <li>
+    Add a caption by right clicking on the table and selecting Insert Caption. Apop-up window will appear.
+    </li>
+  <li>
+    Enter "Data observed." for the caption, ". " for the separator (notice the space after the period), set the Position to Above, and click OK.
+  </li>
+  <li>
+    Ditch the black framing line by double clicking on the frame, going to the Borders tab, clicking the Set No Borders button, and OK.
+  </li>
+  <li>Now we have a nicely formatted table with caption. However, <i>American Antiquity</i> has very specific table formatting guidelines with horizontal lines only, defining the top and bottom of the header row and the bottom of the table. To set the header row lines, higlight the top row of your table, right click, and select Table Properties. A pop-up window will appear.
+  </li>
+  <li>
+    In the Borders tab, click the top and bottom horizontal lines of the User-defined borders window, and click OK.
+  </li>
+  <li>
+    Now highlight the bottom row of your table, and repeat the previous step, except this time, only select the bottom line in the User-defined borders window.
+  </li>
+  <li>Now you have a perfeclty formatted table with caption. The only thing left to do is add an in-text citation of the Table. Do that somewhere in your results section following the instructions for referencing Figure captions above but adapted for Tables. Here's how it all should look:
+    <br><img src="TutorialManuscript/table.png" alt="table">
+  </li>
+</ol>
+
+<h2>Commenting</h2>
+LibreOffice Writer offers a great set of tools for tracking changes and commenting. For easy access to these tools, enable the Track Changes toolbar in the View Toolbars dropdown of the File menu bar. The Track Changes toolbar will appear on your screen. Instructions forthcoming. 
+
+<h2>Sharing and output</h2>
+Congratulations. If you made it this far, you've successfully drafted a well formatted archaeology report using LibreOffice Writer. You could try to share such a document with your colleagues or publisher, but chances are they won't know what to do with it. Morevoer, if it's a final report, they don't want an editable document&ndash;they want a completed product that they can easily read, which is typically a PDF. If you're submitting a manuscript for publication, chances are the publisher wants a Word file, or if it's an initial submission, you may want to submit an attractive PDF with embedded figures and tables to help the reviewers easily understanding the arc of your analysis. LibreOffice makes export into these formats easy.
+<p><b>PDF export</b>: To export as PDF, simply click the red PDF icon located in the Standard toolbar, usually located at the top of the page and follow the instructions. PDF export settings can be adjusted by clicking File, Export as PDF in the File menu bar.</p>
+<p><b>Word export</b>: To export as a Word file, simply click File, Save as in the File menu bar, and then select one of the Word extension (.doc or .docx) from the dropdown in the pop-up window.</p>
+<p>And that's it. In case you want to see it again, for comparison, here's what your pdf should look like: <a href="TutorialManuscript/Sample.pdf" target="_blank">sample manuscript</a></p>
+
+
+
+  
+  
