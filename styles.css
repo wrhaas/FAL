@@ -1,0 +1,30 @@
+body{
+    *{
+	font-family:'sans-serif';
+	max-width:1024px;
+	margin: auto;
+	color: 442c1f;
+    }
+    p{
+	padding: 5px;
+    }
+    h1{
+	padding: 15px;
+    }
+    h2{
+	padding: 10px;
+    }
+    ul{
+	padding: 5px;
+    }
+    ol{
+	padding: 5px;
+    }
+    li{
+	padding: 5px;
+    }
+    a:link {color: 442c1f;text-decoration: underline;}
+    a:visited {color: d3bc5f;text-decoration: none;}
+    a:hover {color: blue;text-decoration: none;}
+    a:active {color: 88aa00;text-decoration: underline;}
+}
