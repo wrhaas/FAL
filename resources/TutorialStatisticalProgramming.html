@@ -6,7 +6,7 @@
 
 <h1>Basical statistical programming using R</h1>
 <p>R is an open-source statistical computing language and perhaps the most widely used platform among researchers. This is quickly becoming the case for archaeologists too. Despite it's analytical power, R is also suprisingly simple and intuitive. At it's most basic level, it can serve as a simple calculator for addition, subtraction, multiplaction, and division. From there, the sky is the limit. R can be used to perform matrix algerbra, statistical analysis, simulation, mapping, visualization, Bayesian computation, and the list goes on. This tutorial will introduce you to a few foundational skills including basic calculation, data tables, summary statistics, and plotting. For example, you will learn how to quickly find the mean and standard deviation for a set of numerical values and visualize data trends using graphical plots. Here are some examples of the graphical visualizations that you will produce in this tutorial:
-<br><img src="RTutorial/Plots.png" alt="plots"></p>
+<br><img src="TutorialStatisticalProgramming/Plots.png" alt="plots"></p>
 
 <h1>Installation</h1>
 <p>To complete this tutorial, you must install R on your computer. R is available for Windows, Mac, and Linux operating systems. Follow the installation instructions provided on the <a href="https://www.r-project.org/" target="_blank">R website</a> where you will click the CRAN link under the Download menu item. Select any link from the long list of download locations. I usually select the one that is geographically closest to me. It doesn't matter which you choose.  Installation instructions will vary by operating system and version. This tutorial is based on R version 4.2.2 as implemented in linux <a href="https://ubuntu.com/" target="_blank">Ubuntu</a> 20.04 operating system. These system details may entail small&ndash;sometimes frustrating&ndash;differences for users working with Mac or Windows operating systems.</p>
@@ -19,7 +19,7 @@ sudo apt install ess</code></pre>
 <h1>Opening R</h1>
 <ol>
  <li>Use your favorite method to open R. Typically this involves double-clicking on the R icon on your Desktop or other location. However, I prefer to open a command line terminal and enter <code>R</code>. This may seem silly, but it is actually the fastest way to open the software once you get used to it. Whatever approach you take, the following screen will appear (or something like it depending on your operating system):
-   <br><img src="RTutorial/Ropen.png" alt="R opening screen">
+   <br><img src="TutorialStatisticalProgramming/Ropen.png" alt="R opening screen">
    <br>This screen shows the R <i>console</i>. The console is where calculations are performed.</li>
 </ol>
  
@@ -68,30 +68,30 @@ sudo apt install ess</code></pre>
   <li>Functions can also be used for simple graphical applications. Try,
     <pre><code>hist(a)</code></pre>
 	This is the histogram function, and it produces a frequency plot of your data. It should look something like this:
-    <br><img src="RTutorial/hist.png" alt="histogram">
+    <br><img src="TutorialStatisticalProgramming/hist.png" alt="histogram">
     <br>Histograms offer useful visualizations of numerical data. You can quickly get a sense of the range of values and any trends.</li>
   <li><b>Function arguments</b>. Functions can be fed additional information, called arguments. Suppose we want to label the x axis of our histogram with a more meaningful label. We can add the xlab argument as follows:
     <pre><code>hist(a, xlab="site area (sq. m)")</code></pre>
 	Note that arguments are separated by commas. Now your histogram should exhibit a relabled x axis.</li>
   <li>Change the color of the bars to red by re-running the function and adding the argument, <code>col="red"</code>. Tip: you can typically use your keyboard's up-arrow to recall a previous line of code so that you don't have to re-type code from scratch each time.</li>
   <li>Change the title of the plot to "archaeological sites" by adding the argument called, main. Your plot should now look something like this:
-    <br><img src="RTutorial/hist2.png" alt="histogram2">
+    <br><img src="TutorialStatisticalProgramming/hist2.png" alt="histogram2">
   </li>
   <li>Another common and useful plot function is the boxplot, or box-and-whisker plot. Boxplots are used to compare numerical datasets. Compare your <code>y</code> and <code>z</code> values using the boxplot function as follows: <pre><code>boxplot(y,z)</code></pre></li>
   <li>Yet another common and useful plot function is the scatter plot, which is simply <code>plot</code>. Scatterplots are used to evaluate relationships between two numerical variables. Use the <code>plot</code> function to see if there is a relationship between y and z as follows:
     <pre><code>plot(y,z)</code></pre>
     You should get something like this:
-    <br><img src="RTutorial/scatter.png" alt="scatter plot"></li>
+    <br><img src="TutorialStatisticalProgramming/scatter.png" alt="scatter plot"></li>
   <li>Change the dot colors to blue using the <code>col</code> argument as described above; change the dots to triangles using the argument, <code>pch=17</code>; and double their size with the argument, <code>cex=2</code>.
     <br>pch stands for "plot character." Do a google search for "R pch" to see what the plot character codes are. cex stands for "character expansion" and specifies a multiplier for how much you want to increase the the size of plot characters. For example, <code>cex=2</code> increases the size of the character by a factor of 2&mdash;the size is doubled. Your plot should look something like this now:
-    <br><br><img src="RTutorial/scatter2.png" alt="scatter2"></li>
+    <br><br><img src="TutorialStatisticalProgramming/scatter2.png" alt="scatter2"></li>
 </ol>
 
 <h1>Exporting graphics</h1>
 <p>Although graphics windows are useful for visualizing your data on the computer, they are not well formatted for printing or publication. To export properly formatted graphics, you can use the <code>png</code> function. This function allows you to precisely control the size and resolution of your graphical output so that it is perfectly formatted for publication. The function assumes some knowlege of how computer graphics work. These details will not be discussed here, but they are addressed in the graphics tutorial using Gimp. See that tutorial for technical details toward understanding graphics.</p>
 <ol>
   <li>Enter the following <code>png</code> command into your console, customizing the path name to specify where you would like to store the image on your computer:
-    <pre><code>png("/home/username/SomeFolder/RTutorial/plot.png",width=4,height=4,units="in",res=300,pointsize=10)</code></pre>
+    <pre><code>png("/home/username/SomeFolder/TutorialStatisticalProgramming/plot.png",width=4,height=4,units="in",res=300,pointsize=10)</code></pre>
     Note that this directory syntax is specific to linux. It will differ for Windows and Mac users who should consult Google for the correct syntax.
     <p>What this code says is, create an image file called "plot.png" at the specified location on your computer, and make that image 4 inches high x 4 inches wide at a resolution of 300 pixels per inch. 300 pixels per inch is a standard resolution for pubication. The "pointsize" argument sets the default text size to 10 pt, which is a common font size for publication graphics.</p></li>
   <li>When you hit enter, nothing will happen. This is because what you've done is opened an invisible plot window in the background, which is ready to accept your plot.</li>
@@ -121,7 +121,7 @@ sudo apt install ess</code></pre>
 <p>Often we would like to import large datasets such as those that are created in spreadsheets. Although it is possible to import an number of data formats into R, the most widely used is the Comma Separated Value (csv) format. csv files are easily created using standard spreadsheet software such as LibreOffice Calc (see spreadsheet tutorial) or Microsoft Excel. In this section you will import a largdataset of archaeological sites. The sites will be explained in the final section of this tutorial. For now, just know that you are importing a dataset in which each line in the table represents an archaeological site, and each column represents some attribute associated with those sites.</p>
 <ol>
   <li>Import the data using the read.csv function, and store the data frame under the variable name, "data",  as follows:
-    <pre><code>data&lt;-read.csv("/home/yourname/folders/RTutorial/chaccus.csv")</pre></code></li>
+    <pre><code>data&lt;-read.csv("/home/yourname/folders/TutorialStatisticalProgramming/chaccus.csv")</pre></code></li>
   <li>Enter, <code>data</code>, to see your imported data table. Note that its a bit large an unwieldy.</li>
   <li>Use the head function to inspect the first few lines of the data as follows: <pre><code>head(data)</code></pre></li>
   <li>Make a simple map of the data locations by plotting the easting and northing values as follows:
@@ -144,7 +144,7 @@ sudo apt install ess</code></pre>
     </li>
     <li>Type <code>x&lt;-4</code>.</li>
     <li>Pass that line of code from your script to the R console by hitting <code>Ctrl+enter</code> on your keyboard. The first time you do this, you will be prompted to start a directory. Just hit <code>enter</code> to accept the default. A console screen will appear with the code that you passed to it. Your emacs script and R console will look as follows:
-      <br><img src="RTutorial/Remacs.png" alt="R in emacs"></li>
+      <br><img src="TutorialStatisticalProgramming/Remacs.png" alt="R in emacs"></li>
   </ol>
   <ol>
     <li>Windows and mac users</li>
@@ -158,9 +158,9 @@ sudo apt install ess</code></pre>
 
 <h1>Exercise: An archaeological analysis</h1>
 <p>You will now bring all methods together to script an archaeological analysis using R code. You will evaluate a hypothesis for a series of archaeological features that were recently discovered in satellite imagery. These mysterious features are V-shaped stone walls that occur in the Andean highlands of South America. Here's an example of one of these archaeological features as seen in satellite imagery:
-<br><img src="RTutorial/chaccuScreen.png" alt="chaccu satellite"></p>
+<br><img src="TutorialStatisticalProgramming/chaccuScreen.png" alt="chaccu satellite"></p>
 <p>Archaeologists have documented hundreds of these. One hypothesis suposes that they served as animal trapping features used by Indigenous communities to cooperatively hunt large mammals, likely <a href="https://en.wikipedia.org/wiki/Vicu%C3%B1a" target="_blank">vicuña</a>. This hypothesis anticipates that the traps are located in vicuña habitat, which occurs between 4000-5000 meters above sea level (masl). Your goal is to test this prediction&mdash;to determine if these features are located between 4000&ndash;5000 masl as the communal hunting hypothesis predicts. Follow the instructions below referring back to the methods above as needed. Your graphics will look something like this,
-<br><img src="RTutorial/Plots.png" alt="plots">
+<br><img src="TutorialStatisticalProgramming/Plots.png" alt="plots">
 <br>but feel free to add your own stylistic twists.</p>
 
 <ol>
