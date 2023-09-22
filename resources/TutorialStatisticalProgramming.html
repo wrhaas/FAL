@@ -1,0 +1,204 @@
+<head>
+    <link href="../styles.css" rel="stylesheet">
+  </head>
+
+<p><a href="../index.html"><img src="../images/FAL_logo150.png" height="100" align="left" alt="FAL logo 150" style="padding-right: 10px; padding-bottom: 10px;"></a></p>
+
+<h1>Basical statistical programming using R</h1>
+<p>R is an open-source statistical computing language and perhaps the most widely used platform among researchers. This is quickly becoming the case for archaeologists too. Despite it's analytical power, R is also suprisingly simple and intuitive. At it's most basic level, it can serve as a simple calculator for addition, subtraction, multiplaction, and division. From there, the sky is the limit. R can be used to perform matrix algerbra, statistical analysis, simulation, mapping, visualization, Bayesian computation, and the list goes on. This tutorial will introduce you to a few foundational skills including basic calculation, data tables, summary statistics, and plotting. For example, you will learn how to quickly find the mean and standard deviation for a set of numerical values and visualize data trends using graphical plots. Here are some examples of the graphical visualizations that you will produce in this tutorial:
+<br><img src="RTutorial/Plots.png" alt="plots"></p>
+
+<h1>Installation</h1>
+<p>To complete this tutorial, you must install R on your computer. R is available for Windows, Mac, and Linux operating systems. Follow the installation instructions provided on the <a href="https://www.r-project.org/" target="_blank">R website</a> where you will click the CRAN link under the Download menu item. Select any link from the long list of download locations. I usually select the one that is geographically closest to me. It doesn't matter which you choose.  Installation instructions will vary by operating system and version. This tutorial is based on R version 4.2.2 as implemented in linux <a href="https://ubuntu.com/" target="_blank">Ubuntu</a> 20.04 operating system. These system details may entail small&ndash;sometimes frustrating&ndash;differences for users working with Mac or Windows operating systems.</p>
+
+<p><b>For Ubuntu users</b> (Windows and Mac users, ignore), the standard R installation only runs in Terminal, which does not allow you to save your script. Although running R in Terminal can be useful for quick calculations, it's limited for more involved coding that requires editing over multiple sessions. To create a scripting component, you need to install packages called, emacs and ess. Emacs is simple text editing software that is commonly used in programming. ESS (emacs speaks statistics) is an add-on package for emacs that allows R and emacs to communicate. These can be easily installed via Terminal as follows:
+<pre><code>sudo apt install emacs
+sudo apt install ess</code></pre>
+</p>
+
+<h1>Opening R</h1>
+<ol>
+ <li>Use your favorite method to open R. Typically this involves double-clicking on the R icon on your Desktop or other location. However, I prefer to open a command line terminal and enter <code>R</code>. This may seem silly, but it is actually the fastest way to open the software once you get used to it. Whatever approach you take, the following screen will appear (or something like it depending on your operating system):
+   <br><img src="RTutorial/Ropen.png" alt="R opening screen">
+   <br>This screen shows the R <i>console</i>. The console is where calculations are performed.</li>
+</ol>
+ 
+
+<h1>Basic calculation</h1>
+<p>Now that you have an R console open, let's perform some basic calculations.</p>
+<ol>
+  <li>Enter, <code>4+4</code>. Be sure to enter the command by hitting the Enter key. You will see that R performs this basic calculation like any calculator.</li>
+  <li>Enter, <code>4+4*2/(3+6)-5</code>. Again, you get the result for this basic arithmetic according to standard <a href="https://en.wikipedia.org/wiki/Order_of_operations" target="_blank">order of operations</a>.</li>
+  <li>Enter, <code>3^5</code>. R handles exponentiation (i.e., raising to a power) calculations easily with the carat symbol (^). The carat symbol is usually located at or near the number 6 on your keyboard.</li>
+  <li>Now create a variable called <code>x</code> to represent the number 4 as follows: <pre><code>x&lt;-4</code></pre>
+    This says <code>x=4</code>. In R computing language <code>&lt;-</code> is the equal sign used when storing variables.</li>
+  <li>Enter, <code>x</code>. You should see the number 4 returned in your console.</li>
+  <li>Enter, <code>x+25</code>. You should see the number 29 returned in your console. In this simple way, R can perform simple algabreic calculations of virtually any complexity.</li>
+</ol>
+
+<h1>Vectors</h1>
+<p>R can also work with collections of numbers, called <i>vectors</i>.</p>
+<ol>
+  <li>In R console, enter a vector called <code>y</code> with 10 values as follows:
+    <pre><code>y&lt;-c(4,6,2,3,6,7,8,2,1,3)</code></pre>
+    The <code>c()</code> portion of this line is a combine function that combines the entities entered between the parentheses. Each data point is separated by a comma. More information about functions will be presented below.</li>
+  <li>Enter <code>y</code> to verify that you've properly stored the vector. You should see the numbers returned on the screen.</li>
+  <li>Suppose that these numbers represent a series of counts (e.g., the number of structures per archaeological site), and for some reason you want to augment each value by 1. Enter <code>y+1</code>. You will see that 1 has been added to all numbers.</li>
+  <li>Enter <code>y</code>. Notice that the numbers have returned to their original values. This is because you did not store your updated vector.</li>
+  <li>To store the updated variable, enter <code>y&lt;-y+1</code>. This says that y equals y + 1.</li>
+  <li>Enter <code>y</code>, and you will now see that all y values have been updated.</li>
+  <li>Create a second vector called <code>z</code> with 10 new numbers that you randomly choose.</li>
+  <li>Enter <code>z</code> to verify your vector.</li>
+  <li>Suppose that y and z are the lengths and widths of 10 objects&ndash;perhaps archaeological sites. Store the product of y and z as a variable called a as follows: <pre><code>a&lt;-y*z</code></pre></li>
+  <li>Enter <code>a</code> to verify the result. You should see 10 numbers that reflect the product of the x and y vectors.</li>
+  <li>Vectors can also contain text. Create a variable called <code>site</code> that stores the letters A&ndash;K. When entering text data in R, the text should be in quotes to avoid confusion with variable names (e.g., we don't want R to confuse our site area variable, <code>a</code> with a site called "A"). You could accomplish this as follows: <pre><code>site&lt;-c("A","B","C"...)</code></pre> But here's a shortcut: <pre><code>site&lt;-LETTERS[1:10]</code></pre></li>
+  <li>Note that you can do something similar with number sequences such that <code>1:10</code> will return the numbers 1&ndash;10 in sequence. Try it without storing the number sequence. I.e., enter <pre><code>1:20</code></pre></li>
+  <li>Subsetting: there may be times you would like to access some subset of a vector such as the first value, the last value, or the fifth value, for example. To do that, you enter your vector name followed by brackets that indicate which values you want to return. For example, if you just want the first area value, enter <code>a[1]</code>, and the first area value will be returned.</li>
+  <li>Return the fifth entry be typing <pre><code>a[5]</code></pre></li>
+  <li>Return the second through the eighth entries by typing <pre><code>a[2:8]</code></pre></li>
+</ol>
+
+<h1>Functions</h1>
+<p>Functions are tools for quickly performing calculations on datasets. For example, we can use functions to calculate the average, minimum, or maximum value for a set of numbers. In R, functions are expressed as the function name followed by input data in parentheses. For example, the mean function is expressed as <code>mean(x)</code>, which finds the mean for vector, x. R has thousands of functions for data analysis. We'll work through a few commonly used functions. You can find other functions as needed with simple web searches.</p>
+<ol>
+  <li>Use the mean function to calculate the mean of your site areas as follows: <pre><code>mean(a)</code></pre></li>
+  <li>Use the min function to calculate the mean of your site areas as follows: <pre><code>min(a)</code></pre></li>
+  <li>Now try passing <code>a</code> through the following commonly used functions: <code>max</code>, <code>median</code>, <code>sd</code>, and <code>summary</code>.</li>
+  <li>Getting help: enter, <code>?sd</code> to open the help file for the <code>sd</code> function. A help file will appear. If you ever need information about a function, just open the function's help file by typing ? followed by the function name. You can close this help file in R Terminal by hitting the letter "q" (exiting the help file may vary by system. Consult Google as needed).</li>
+  <li>Functions can also be used for simple graphical applications. Try,
+    <pre><code>hist(a)</code></pre>
+	This is the histogram function, and it produces a frequency plot of your data. It should look something like this:
+    <br><img src="RTutorial/hist.png" alt="histogram">
+    <br>Histograms offer useful visualizations of numerical data. You can quickly get a sense of the range of values and any trends.</li>
+  <li><b>Function arguments</b>. Functions can be fed additional information, called arguments. Suppose we want to label the x axis of our histogram with a more meaningful label. We can add the xlab argument as follows:
+    <pre><code>hist(a, xlab="site area (sq. m)")</code></pre>
+	Note that arguments are separated by commas. Now your histogram should exhibit a relabled x axis.</li>
+  <li>Change the color of the bars to red by re-running the function and adding the argument, <code>col="red"</code>. Tip: you can typically use your keyboard's up-arrow to recall a previous line of code so that you don't have to re-type code from scratch each time.</li>
+  <li>Change the title of the plot to "archaeological sites" by adding the argument called, main. Your plot should now look something like this:
+    <br><img src="RTutorial/hist2.png" alt="histogram2">
+  </li>
+  <li>Another common and useful plot function is the boxplot, or box-and-whisker plot. Boxplots are used to compare numerical datasets. Compare your <code>y</code> and <code>z</code> values using the boxplot function as follows: <pre><code>boxplot(y,z)</code></pre></li>
+  <li>Yet another common and useful plot function is the scatter plot, which is simply <code>plot</code>. Scatterplots are used to evaluate relationships between two numerical variables. Use the <code>plot</code> function to see if there is a relationship between y and z as follows:
+    <pre><code>plot(y,z)</code></pre>
+    You should get something like this:
+    <br><img src="RTutorial/scatter.png" alt="scatter plot"></li>
+  <li>Change the dot colors to blue using the <code>col</code> argument as described above; change the dots to triangles using the argument, <code>pch=17</code>; and double their size with the argument, <code>cex=2</code>.
+    <br>pch stands for "plot character." Do a google search for "R pch" to see what the plot character codes are. cex stands for "character expansion" and specifies a multiplier for how much you want to increase the the size of plot characters. For example, <code>cex=2</code> increases the size of the character by a factor of 2&mdash;the size is doubled. Your plot should look something like this now:
+    <br><br><img src="RTutorial/scatter2.png" alt="scatter2"></li>
+</ol>
+
+<h1>Exporting graphics</h1>
+<p>Although graphics windows are useful for visualizing your data on the computer, they are not well formatted for printing or publication. To export properly formatted graphics, you can use the <code>png</code> function. This function allows you to precisely control the size and resolution of your graphical output so that it is perfectly formatted for publication. The function assumes some knowlege of how computer graphics work. These details will not be discussed here, but they are addressed in the graphics tutorial using Gimp. See that tutorial for technical details toward understanding graphics.</p>
+<ol>
+  <li>Enter the following <code>png</code> command into your console, customizing the path name to specify where you would like to store the image on your computer:
+    <pre><code>png("/home/username/SomeFolder/RTutorial/plot.png",width=4,height=4,units="in",res=300,pointsize=10)</code></pre>
+    Note that this directory syntax is specific to linux. It will differ for Windows and Mac users who should consult Google for the correct syntax.
+    <p>What this code says is, create an image file called "plot.png" at the specified location on your computer, and make that image 4 inches high x 4 inches wide at a resolution of 300 pixels per inch. 300 pixels per inch is a standard resolution for pubication. The "pointsize" argument sets the default text size to 10 pt, which is a common font size for publication graphics.</p></li>
+  <li>When you hit enter, nothing will happen. This is because what you've done is opened an invisible plot window in the background, which is ready to accept your plot.</li>
+  <li>Re-enter the plot function from step 11 of the Functions section above. Again, this can be done quickly using your keyboard's up arrow.</li>
+  <li>Enter the device off function to close your plot window as follows:
+    <pre><code>dev.off()</code></pre>
+  </li>
+  <li>Again...nothing will happen...apparently. Use your file browser to navigate to the directory where you placed the png file. You should find "plot.png" there. Double click it to open the image in the default image viewer. You should now see a nicely formatted plot that you could add to a word processing document (see LibreOffice Word Processing tutorial).</li>
+</ol>
+
+<h1>Data frames</h1>
+<p>Vectors are useful when dealing with few data points. As the number of data points or vectors increases, it becomes useful to use data frames. Data frames refer to data tables, which can be stored as variables in R just like vectors and individual quantities.</p>
+<ol>
+  <li>Create a dataframe using your site, y, z, and a vectors using the <code>data.frame</code> function as follows:
+    <pre><code>data.frame(site,length=y,width=z,area.m=a)</code></pre>
+    Note that we can specify column names for each variabl using the "=" sign. For example, here we've specified that "length" is the column name for our variable, y.</li>
+  <li>Now store the data frame as a variable called <code>df</code> by preceding the last line of code with <code>df&lt;-</code>.</li>
+  <li>Enter <code>df</code> to return your data frame. Now you have a nice data frame to work with. Let's see how to work with data frames.</li>
+  <li>Subsetting: There are time when you would like to work with a specific portion of your data frame. As with vectors, you can subset data frames using brackets. However, you must specify both the row and column numbers that you wish to subset. Row and column numbers are separated by a comma. Suppose you would like to view only the area value for site D. Enter,<pre><code>df[4,4]</code></pre> You will see only the area value for site D, which is located in row 4, column 4, is returned.</li>
+  <li>Suppose you wish to return all information associated with site D. Enter, <pre><code>df[4,]</code></pre> Leaving the column term blank indicates that all columns should be returned. You should see just the column 4 values.</li>
+  <li>The same can be done for rows. Try, for example, <pre><code>df[,4]</code></pre>, which will return all area values&ndash;that is, all values in the fourth column of the data frame.</li>
+  <li>Another convenient method for retreiving data frame columns is to use the <code>$</code> term to specify a column name within a data frame. For example, try <pre><code>df$length</code></pre></li>
+  <li>Now lets put this to use. Suppose you would like to visually summarize the length values in your data frame with a histogram. Enter, <pre><code>hist(df$length)</code></pre></li>
+</ol>
+
+<h1>Data import</h1>
+<p>Often we would like to import large datasets such as those that are created in spreadsheets. Although it is possible to import an number of data formats into R, the most widely used is the Comma Separated Value (csv) format. csv files are easily created using standard spreadsheet software such as LibreOffice Calc (see spreadsheet tutorial) or Microsoft Excel. In this section you will import a largdataset of archaeological sites. The sites will be explained in the final section of this tutorial. For now, just know that you are importing a dataset in which each line in the table represents an archaeological site, and each column represents some attribute associated with those sites.</p>
+<ol>
+  <li>Import the data using the read.csv function, and store the data frame under the variable name, "data",  as follows:
+    <pre><code>data&lt;-read.csv("/home/yourname/folders/RTutorial/chaccus.csv")</pre></code></li>
+  <li>Enter, <code>data</code>, to see your imported data table. Note that its a bit large an unwieldy.</li>
+  <li>Use the head function to inspect the first few lines of the data as follows: <pre><code>head(data)</code></pre></li>
+  <li>Make a simple map of the data locations by plotting the easting and northing values as follows:
+    <pre><code>plot(x=easting,y=northing,asp=1)</code></pre>
+    The asp = 1 term says to constrain the x and y axes to a 1:1 ratio because they are the same units as is the case for most geographic maps. You should see a simple map of your data points that looks as follows:</li>
+  <li>You would like to know how many sites there are in this dataset, which can be assessed by asking how many lines are in the table. Get your answer with the nrow function as follows:
+    <pre><code>nrow(data)</code></pre></li>
+  <li>You can now use any of the functions described in the previous sections to assess your data. Try, for example,
+    <pre><code>mean(data$length)</code></pre>
+    to return the average length of the chaccu features.</li>
+</ol>
+
+<h1>Scripting</h1>
+<ol>
+  <li>Ubuntu users</li>
+  <ol>
+    <li>To create an R script, you have to first create an R file, and open it in emacs. Typically, I do this by entering the following in Terminal:
+    <pre><code>emacs SomeFileName.R &</code></pre>
+    The first time you open emacs, an introductory screen will appear. Check the "Never show it again" box, and click the "Dismiss startup screen" link. You will now see a blank document. This is where you write your script.
+    </li>
+    <li>Type <code>x&lt;-4</code>.</li>
+    <li>Pass that line of code from your script to the R console by hitting <code>Ctrl+enter</code> on your keyboard. The first time you do this, you will be prompted to start a directory. Just hit <code>enter</code> to accept the default. A console screen will appear with the code that you passed to it. Your emacs script and R console will look as follows:
+      <br><img src="RTutorial/Remacs.png" alt="R in emacs"></li>
+  </ol>
+  <ol>
+    <li>Windows and mac users</li>
+    <ol>
+      <li>Open R and create a new text file using the File menu bar like you would in any other software.</li>
+      <li>Type <code>x&lt;-4</code>.</li>
+      <li>Pass that line of code from your script to the R console by hitting <code>Windows + r</code> or <code>Apple + r</code> on your keyboard.</li>
+      <li> You can now enter and save R script in an R file and pass code to the console with a simple keystroke. Save and close the file using the menu buttons in emacs or R, as the case may be.</li>
+    </ol>
+  </ol>
+
+<h1>Exercise: An archaeological analysis</h1>
+<p>You will now bring all methods together to script an archaeological analysis using R code. You will evaluate a hypothesis for a series of archaeological features that were recently discovered in satellite imagery. These mysterious features are V-shaped stone walls that occur in the Andean highlands of South America. Here's an example of one of these archaeological features as seen in satellite imagery:
+<br><img src="RTutorial/chaccuScreen.png" alt="chaccu satellite"></p>
+<p>Archaeologists have documented hundreds of these. One hypothesis suposes that they served as animal trapping features used by Indigenous communities to cooperatively hunt large mammals, likely <a href="https://en.wikipedia.org/wiki/Vicu%C3%B1a" target="_blank">vicuña</a>. This hypothesis anticipates that the traps are located in vicuña habitat, which occurs between 4000-5000 meters above sea level (masl). Your goal is to test this prediction&mdash;to determine if these features are located between 4000&ndash;5000 masl as the communal hunting hypothesis predicts. Follow the instructions below referring back to the methods above as needed. Your graphics will look something like this,
+<br><img src="RTutorial/Plots.png" alt="plots">
+<br>but feel free to add your own stylistic twists.</p>
+
+<ol>
+  <li>Create a new R script document called "chaccu.R".</li>
+  <li>In your new script, import the csv file called "chaccus.csv", and store these data as a variable called, "sites".</li>
+  <li>Show the first five lines of the table using the <code>head</code> function. Note that each line of the data frame represents a site.</li>
+  <li>Determine how many sites are in the table using the <code>nrow</code> function. How many sites are in the dataset?</li>
+  <li>Make a simple map of the site locations using the plot function with the east variable as the x value and north variable as y value. Be sure to include the <code>asp=1</code> term to make sure the x and y axes are equivalently scaled. Do you observe any patterning in the geographies of the sites?</li>
+    <li>Given that you are trying to understand the elevation of the sites, do you see any data columns that indicate elevation? Return the elevation data using the <code>$</code> function as described in the data frame section of this tutorial. It's difficult to make any sense of so many values just by looking at them. We need a better way to visualize and summarize the data.</li>
+  <li>Now inspect the elevation of the archaeological features by creating a histogram of the "elev.m" variable using the <code>hist</code> function and generating summary statistics using the <code>summary</code> function. Note that the units are meters above sea level.</li>
+  <li>Recall that the model predicts that the traps fall between 4000&ndash;5000 meters above sea level. Add a vertical red line to your histogram at 4000 m using the <code>abline</code> function as follows:
+    <pre><code>abline(v=4000,col="red",lty=2)</code></pre>
+    The "v" term indicates that the line should be vertical. The lty term refers to line type. A value of 2 produces a dashed line. And, of course, "col" refers to color.
+  </li>
+  <li>repeat the previous command at 5000 m. What do you observe in the historgram? Do the data conform to the prediction?</li>
+  <li>Update your plot code so that the x axis is labeled, "elevation (m)" and the title is blank (main="").</li>
+  <li>Use the <code>png</code> function to export a png image called "ElevHist.png" that is 5 x 5 inches at 300 DPI and 10 pt font.</li>
+  <li>You should observe that the data largely conform to the prediction but also that there is a cluster of values that occur below 4000 m. You note that a different, larger species of camelid called the <a href="https://en.wikipedia.org/wiki/Guanaco" target="_blank">guanaco</a> lives at that elevation. From that hypothesis, you predict that the low elevation traps should be larger to accomodate the larger animals.</li>
+  <li>Evaluate this new hypothesis using the <code>plot</code> function with elevation as the predictor variable (x axis) and length as the response variable (y axis). Does there appear to be any relationship?</li>
+    <li>Update your plot code so that the x axis is labeled, "elevation (m)", the y axis is labeled "length (m)",  and the title is blank.</li>
+    <li>Use the <code>png</code> function to export a png image called "ElevLength.png" that is 5 x 5 inches at 300 DPI and 10 pt font.</li>
+  <li>You further observe that there are two different "corral" shapes&mdash;round and square, which is recorded in the "corral.shape" variable. Use the <code>boxplot</code> function to determine whether site length differs by "corral" shape. Your boxplot code will be a little different here compared to how you executed the code before. This time, you will express your continuous variable (elevation) as a function of the categorical variable as follows:
+    <pre><code>boxplot(sites$length~sites$corral.shape)</code></pre>
+    Note that the tilde (~) means "as a function of." So this code says, make a boxplot where site length varies as a function of corral shape. Does there seem to be a relationsip?</li>
+  <li> You should provisionally see a relationship, but it's a bit difficult to tell because the values are "squished" toward the bottom of the plot. A nice trick for spreading out your data is to logarithmically scale your axis. Do this by adding a <code>log="y"</code> term to your plot as follows:
+    <pre><code>boxplot(sites$length~sites$corral.shape,log="y")</code></pre>
+    Notice that the y axis scale in now non-linear. Is the pattern any clearer?</li>
+    <li>Update your boxplot code so that the x axis is labeled, "corral shape"; the y axis is labeled "length (m)"; and title is blank.</li>
+  <li>Use the <code>png</code> function to export a png image called "ShapeLength.png" that is 5 x 5 inches at 300 DPI and 10 pt font.</li>
+  <li>You realize that you have no idea how big these features are. Do they span centimeters? Meters? Kilometers? You should probably verify that the size of the features is reasonable given the hypothesis. Inspect site size by creating a histogram of the "length" variable using the <code>hist</code> function and generating summary statistics using the <code>summary</code> function. Note that the units of the length variable are meters. What do you observe? Do these seem like reasonably sized features given the hypothesis?</li>
+      <li>Update your histogram code so that the x axis is labeled, "length (m)" and the title reads, "suspected animal traps".</li>
+  <li>Use the <code>png</code> function to export a png image called "LengthHist.png" that is 5 x 5 inches at 300 DPI and 10 pt font.</li>
+  <li>You've now analyzed the animal-trap hypothesis using R statistical computing language. Well done. What can you conclude? Do the data support the predictions? Embed your graphics in LibreOffice document with figure captions (see LibreOffice tutorial), and draft a one-paragraph conclusion that references your graphics.</li>
+</ol>
+
+
+  
+
+
+  
+  

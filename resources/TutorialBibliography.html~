@@ -1,0 +1,168 @@
+<style>
+  pre{
+    background-color: #eee;
+    border: 1px solid #999;
+    display: block;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    overflow-x: auto;
+    }
+  code{
+    background-color: #eee;
+    padding: 0px;
+    }  
+  ol li { padding: 10px 10px; }
+</style>
+
+<h1>Bibliography Management with JabRef: A step-by-step tutorial</h1>
+Archaeology invariably requires the composition of scholarly manuscripts that include references to previous archaeological work. This is an essential component of scholarship because it facilitates the advancement of knowledge from the findings of many scholars in a way that is transparent to the consumers of research. Scholarly references are cited in the main text of such documents and are elaborated in a References Cited section that appears at the end of the document. Cited references often number in the 10s to 100s, making the management of scholarly references a challenge. Adding further challenge to bibliography management is the fact that different publication venues often have different formatting standards, which can contribute to inordinate amounts of time managing bibliographies. While these are not insurmountable challenges using wrought force via manual bibliography management, the burden can be eased substantially through the use of bibliography management software.
+
+<p>Bibliography management software provides a place to store scholarly reference information for books, articles, reports, theses, dissertations, etc. The software furthermore provides tools for efficiently adding references to your bibliographic library, editing reference information in your library, citing references in word processing documents (see word processing tutorial), and compiling references into a References Cited section in your word processing documents. These processes are automated or semi-automated and can save significant amounts of time and reduce error if used properly. Here's a snippet from a published manuscript (<a href="https://doi.org/10.1007/s10816-021-09525-7" target="_blank">Kitchel et al., 2020, <i>Journal of Archaeological Method and Theory</i></a>) that used auto-generated in-text citations:
+  <br><br><image src="BibliographyManagerTutorial/KitchelA.png" alt="Kitchel A"></p>
+    <p>And here's a snippet from the auto-generated bibliography. Notice how the Stiner (2001) in-text citation (above) appears in the References Cited (below):
+<br><image src="BibliographyManagerTutorial/KitchelB.png" alt="Kitchel B"></p>
+
+<p>What do I mean by "properly"? One mistake would be in assuming that a bibliogtaphy manager will do everthing for you in terms of bibliography management. This is simply not the case. Bibilography managers make many mistakes. It's on you, the user, to know the citation format that you are using so that you can catch and correct your bibliography manager. If you have never manually formatted a bibliography according to some professional standard, then you are not ready to use a bibliography manager. In that case, take some time to learn a bibliographic style. A common bibliographic style in the field of archaeology is the <a href = "https://documents.saa.org/container/docs/default-source/doc-publications/style-guide/saa-style-guide_english_updated_2021_final08023c15928949dabd02faafb269fb1c.pdf?sfvrsn=c1f41c1b_2" target="_blank">Editorial Policy, Inforamtion for Authors, and Style Guide for <i>American Antiquity</i>, <i>Latin American Antiquity</i>, and <i>Advances in Archaeological Practice</i></a>. I recommend that North and South American archaeologists be familiar with this style guide before using a bibliography management software. Premature use of bibilography management software is likely to turn potential time savings into time lost.</p>
+
+<p>Another prerequisite to using bibliography management software is familiarity with word processing software, which allows you to digitally compose the manuscripts that require scholarly citations. If you do not have basic proficiency in a word processing software, I recommend completing the following word processing tutorial, which will introduce you to my preferred word processing software, LibreOffice Writer.</p>
+
+<p>If you are proficient in a word processing software and the use of one or more bibliographic styles, then you are ready to use a bibliographic management software. There are a number of options out there. The one that I have come to prefer, and which is the subject of the tutorial, is called <a href = "https://www.jabref.org/" target="_blank">JabRef</a>. Here's what the JabRef graphical user interface (GUI) looks like:<br>
+  <image src="BibliographyManagerTutorial/JabRefGUI.png" alt="JabRefGUI">
+    <br>This preference for JabRef follows from several observations. First, JabRef, like all the other software packages used in this tutorial series, if open-source and free. Second, JabRef works across major computer platforms including Linux, Windows, and Mac. Third, JabRef uses a universal bibliographic file format, known as BibTeX, which makes bibliography management transparent, accessible, and transportable between bibliography management software packages. Last but not least, JabRef works well. I have found that I can use JabRef to implement all of the bibliographic styles that I've needed as an author who publishes in different venues with different bibliographic styles. Making JabRef work can involve some legwork, but I have always been able to make it work in ways that have saved me inordinate amounts of time.</p>
+
+<p>So without further ado, let's get started with the tutorial. The order of this tutorial will be slightly different than previous ones, which typically begin with software installation. Here, before we install the software, you will learn how to manually formate a BibTeX file, which is the file type that underlies a JabRef bibilographic database. After that, the tutorial will conver installation and finally implementation of a JabRef bibliography to cite and reference scholarly literature in a manuscript.</p>
+
+<h1>Materials</h1>
+To perform this tutorial, you will need a computer with a text editor software, JabRef, LibreOffice Writer software, and an <i>American Antiquity</i> JabRef style file. Most operating systems come with a text editor software pre-installed. Ubuntu 20.04, for example, uses one called GeditText Editor. I prefer the tex editor software called <a href = "https://www.gnu.org/software/emacs/" target="_blank">Emacs</a>, which is commonly used by scientists, but must be installed separately. Windows users should have acces to a text editor called Notepad. Whatever the case, this tutorial will not cover installation or use of basic text editors given their accessibility and simplicty.
+
+<p>JabRef installation will be covered in a later step in this tutorial. See the word processing tutorial for instructions on installing LibrOffice.</p>
+
+<p>The <i>American Antiquity</i> JabRef style file is used to tell JabRef how to properly display in-text citations and bibliographies in LibreOffice Writer. The style guide is written to conform to the <a href = "https://documents.saa.org/container/docs/default-source/doc-publications/style-guide/saa-style-guide_english_updated_2021_final08023c15928949dabd02faafb269fb1c.pdf?sfvrsn=c1f41c1b_2" target="_blank">Editorial Policy, Inforamtion for Authors, and Style Guide for <i>American Antiquity</i>, <i>Latin American Antiquity</i>, and <i>Advances in Archaeological Practice</i></a>. The style file is  called AmericanAntiquity.jstyle, and is located in the BibliographyManagerTutorial directory associated with this tutorial.</p>
+
+<h1>The BibTeX file</h1>
+JabRef bibliographies are stored in a standard bibliographic format called <a href = "http://www.bibtex.org/" target="_blank">BibTeX</a>. A BibTeX file is a simple text file that has the extension, "bib", which can be opened and edited using JabRef or any text editing software such as Emacs, Notepad, LibreOffice Writer, etc. For example, look at the JabRef image above, and notice that the bibliography file that you are seeing is called, "Refs.bib" as indicated in the title bar. That image shows what a BibTex file looks like when viewed through JabRef. Here's what the same file looks like when viewed in a text editor, in this case Emacs (it will look different in different text editors):<br>
+<image src="BibliographyManagerTutorial/bib.png" alt="bib file">
+  <br>Notice that the same file name&mdash;Refs.bib&mdash;is displayed in the information bar at the bottom of the GUI. So you can see that the same file appears differently in the two different software packages. Ín this section, you will manually create a BibTex file, which you will use for your bibliography and to learn how BibTex files are created&mdash;i.e., what's going on under the hood, so to speak. In later steps, you will learn methods for automated and semi-automated entry of references into your bibliography.
+</p>
+
+<ol>
+  <li>Open your text editor and save a file called <code>MyRefs.bib</code>.</li>
+  <li>Enter the following on the first line of your empty document:
+    <pre><code>@article{Langlie2021,</code></pre>
+    This is BibTex language. What you've done with the <code>@</code> symbol is created a new bibliographic entry. By typing <code>article</code> after the <code>@</code>, you've indicated that this entry is an article entry. BibTeX allows for many different entry types. The most important for archaeological bibliographies are articles, books, and InCollecion. InCollection is the entry type I find most useful for book chapters, which are commonly cited in archaeological manuscripts. For all other entry types&mdash;reports, theses, dissertations, presentations, etc&mdash;I use a miscellaneous entry type called Misc. Although there are entry types for theses, dissertation, reports, and other references types, I've found it easiest to use Misc for everything except articles, books, and InCollecion. We will explore each of these reference types in turn.
+  <p>Notice also that the entry type is followed by a left bracket, <code>{</code>, which is followed by the text, <code>Langlie2021</code>. The left bracket signals that the information to follow is the bibliographic information for the new entry, in this case an article. <code>Langlie2021</code>, is a unique identifier for the entry called a <i>citation key</i>. A standard citation key notation commonly used in BibTeX files is to list the first author's last name and publication year without spaces. If the author has more than one publication in the same year, a letter can be added after the name of the second entry&mdash;for example, <code>Langlie2021a</code>. You can use your own citation key naming scheme, but I find this a simple and useful naming scheme and encourage its use.</li>
+  <li>On the next line of your bib document, enter
+    <pre><code>author = {Langlie, BrieAnna S. and Capriles, Jos{\'{e}} M.},</code></pre>
+    By entering, <code>author = {</code>, you've added an author tag to your bibliographic entry. Any information following the left bracket specifies author names. BibTeX convention is to specify authors' last names first and first names following a comma. Each author's name is separated by <code>and</code>.
+    <p>Notice that the are some additional brackets in the name, José. This is how BibTeX handles special characters such as accent marks. The <code>{\'{e}}</code> specifies the letter e as an accented e. Brackets are also used to constrain capitalization, which we will examine in a later step.</p>
+    <p>Finally, the <code>},</code> closes out the author tag entry.
+  </li>
+  <li>Add the following information to complete the article entry for <code>Langlie2021</code>:
+    <pre><code>  journal = {Archaeological and Anthropological Sciences},
+  title = {Paleoethnobotanical evidence points to agricultural mutualism among early camelid pastoralists of the {Andean} central {Altiplano}},
+  year = {2021},
+  number = {7},
+  volume = {13},
+  pages = {107},	
+  doi = {10.1007/s12520-021-01343-y},
+}</code></pre>
+    Notice that "Andean" is enclosed by brackets. This indicates that capitalization is to be preserved, in this case because Andean is a proper noun. The brackets will not appear when auto-generating bibliographies.
+  </li>
+  <li>Now add a book entry as follows:
+    <pre><code>@Book{Garvey2021,
+  author = {Garvey, Raven},
+  publisher = {University of Utah Press},
+  title = {Patagonian prehistory: human ecology and cultural evolution in the land of giants},
+  year = {2021},
+  address = {Salt Lake City},
+}</pre></code>
+    For each of these entries, there are other tags we could have added such as a web link (url), ISBN identifier, or other. I have chosen to keep the entries simple, limiting the tags to those that are required by the <a href = "https://documents.saa.org/container/docs/default-source/doc-publications/style-guide/saa-style-guide_english_updated_2021_final08023c15928949dabd02faafb269fb1c.pdf?sfvrsn=c1f41c1b_2" target="_blank"><i>American Antiquity</i> style guide</a>.
+  </li>
+  <li>Your file should look similar to the one shown in the graphic above. If so, save and close your file. You will now learn to use the graphical user interface to quickly add to references and edit entries.
+  </li>
+</ol>
+
+<h1>JabRef Installation</h1>
+Now that you've learned how BibTeX files work, you're ready to use JabRef. This will require the JabRef software and a word processing softtware. I recommend LibreOffice Writer for a word processing software. See the word processing tutorial for instructions on how to install and use LibreOffice Writer. This tutorial covers only JabRef installation, which is relatively straightforward. Simply go to the Jabref dowbload page, identify the appropriate operating system/hardware file, download, and follow installation instructions.
+
+<p>The installation procedure will vary by operating system and version. This tutorial is based on JabRef version 5.4 as implemented in linux <a href="https://ubuntu.com/" target="_blank">Ubuntu</a> 20.04 operating system. These system details may entail small&ndash;sometimes frustrating&ndash;differences for users working with Mac or Windows operating systems.</p>
+
+<h1>Adding and editing new bibliographic entries with JabRef</h1>
+JabRef simplifies the management of BibTeX files by allowing you to add and edit bibliographic data in your bibliography. Here, you will learn several techniques to add and edit bibliographic entries.
+<ol>
+  <li>Open JabRef. Your screen should look something like this:<br>
+    <image src="BibliographyManagerTutorial/JabRefOpen.png" alt="JabRef screen">
+      <br>JabRef offers a fairly straightforward with a File menu bar at the top and a LibreOffice integration panel on the left. If you do not see the LibreOffice integration panel, in the File menu bar, click View, OpenOffice/LibreOffice. The LibreOffice integration panel should appear. We will </li>
+  <li>Open your Refs.bib file by clicking File, Open library, navigating to your Refs.bib file, and clicking Open. You should now see the entries that you manually entered into your BibTeX file as follows:
+    <image src="BibliographyManagerTutorial/JabRefBib.png" alt="JabRef bibliography">
+      <br>Notice the two entries&mdash;one article and one book&mdash;in the main pane called Refs.bib. You can see how JabRef reads a BibTeX file. You will enter all subsequent bibliographic entries using JabRef. So this may be the last time you ever manually enter a reference into a BibTeX file. But now you should understand exactly what's happening behind the scenes. This is useful because you can always manually fix errors, share your BibTeX file, or use other software packages that can read BibTeX files (e.g., <a href="https://www.latex-project.org/" target="_blank">LaTeX</a>).</li>
+  <li>Double click the book entry (Garvey 2021). A new panel will appear showing detailed information about that book. The book's information is organized by a series of tabs including the Required Fields, Optional fields, and other tabs.</li>
+  <li>Suppose you would like to add the book's ISBN (International Standard Book Number) to the entry. Click on the Optional field tab, and enter 1647690269 into the ISBN box.</li>
+  <li>Suppose you would like to add an article from Journal of Archaeological Sciences:Reports title, <a href="https://doi.org/10.1016/j.jas.2018.06.009" target="_blank">Scapulae for shovels: Does raw material choice reflect technological ease and low cost in production?</a>. Click the New Entry icon,  <image src="BibliographyManagerTutorial/AddEntry.png" alt="add entry">, located in the toolbar at the top of the page.  A pop-up window will appear. The window will show the different kinds of bibliographic entries that are possible. We want to add an article, but before you click the article button, let's try a shortcut.</li>
+  <li>In the ID type dropdown menu, select <i>DOI</i>. DOI stands for digital object identifier. Most articles are assigned a DOI, which can help you easily locate articles.</li>
+  <li>Go to the article's web page at <a href="https://doi.org/10.1016/j.jas.2018.06.009" target="_blank">https://doi.org/10.1016/j.jas.2018.06.009</a>, and find it's DOI.</li>
+  <li>Copy and paste the DOI into the ID field of the JabRef pop-up window.</li>
+  <li>Click, Generate. The reference should now appear in your bibliography.</li>
+  <li>Select the reference to check that its contents were accurately entered. You should see that the author is Liye Xie. You should see that the title, journal, year, and Citation key are all specified correctly.</li>
+  <li>Right click on the author's name, and select normalize to BibTeX format. The name format will change to last-name-first format.</li>
+  <li>Click the Optional fields tab. You should see that the Volumen and Pages have been correctly specified. No Issue has been specified, but looking at the article, it seems that the journal does not use issues. Also note that page numbers are specified as a double dash. This is the proper way to specify page ranges (i.e., an n-dash). You will see an error if you put a single dash (try it).</li>
+  <li>Take a moment to save your BibTeX file.</li>
+  <li>Again, click the New Entry icon, <image src="BibliographyManagerTutorial/AddEntry.png" alt="add entry">.</li>
+  <li>From the pop-up window, click Others, InCollection. A new entery will be added to your bibliography. InCollection is a useful bibliographic entry type for book chapters or other contributions within books. For example, it's common for archaeological specialists to contribute a specialized analysis within a book by another author. I use InCollection for those instances. </li>
+  <li>Populate your new InCollection entry with the following data:
+    <pre><code>Citation key = Flores2017
+author    = Flores Blanco, Luís Ángel
+booktitle = Repensar el antiguo {Perú} aportes desde la arqueología
+publisher = Instituto de Estudios Peruanos
+title     = El periodo {Arcaico} en la cuenca del lago {Titicaca} y sus alrededores, {Andes} centro-sur
+year      = 2017
+address   = Lima
+editor    = Vega-Centeno Sara-Lafosse, Rafael
+isbn      = 978-9972-51-621-4
+number    = 46
+pages     = 1--84</code></pre>
+    You should now have a new book chapter entry (InCollection) with the citation key, Flores2017. This semi-manual mode of data entry is useful when you don't have a DOI.
+    <p>There are a number of other tools that you can use to quickly add bibliographic entries. Feel free to explore any of these tools to rapidly populate your bibliography. You're ready to put JabRef and your bibliography to work for in-text citations and bibliography creation.</p>
+  </li>
+</ol>
+
+<h1>Citation and bibliography creation with JabRef</h1>
+Now that you have a working bibliography, you can quickly and easily generate bibliographies in LibreOffice Writer. This section shows you how.
+
+<ol>
+  <li>Open your Refs.bib file in JabRef if not already open.</li>
+  <li>Click Select style from the LibreOffic panel.</li>
+  <li>Select the style called Default [Author year] style file.</li>
+  <li>Open an empty document in LibreOffice Writer. If you are not familiar with this software, complete the associated tutorial before continuing.</li>
+  <li>Visit <a href="https://loremipsum.io/" target="_blank">https://loremipsum.io/</a> to generate and copy one paragraph of random Latin text.</li>
+  <li>Paste the random text into your Writer document.</li>
+  <li>Place your cursor at the end of the first sentence just before the period.</li>
+  <li>Toggle to JabRef.</li>
+  <li>In the LibreOffice panel, click the Connect icon, <image src="BibliographyManagerTutorial/connect.png" alt="connect">. JabRef should connect to your LibreOffice document. If you happen to have multiple LibreOffice files open, it will ask you to select one for connection.</li>
+  <li>Select Garvey2021, and click Cite in the LibreOffice panel.</li>
+  <li>Toggle back to LibreOffice. You should see a "(Garvey 2021)" citation. Fix any missing or excess spaces before and after the citation.</li>
+  <li>Toggle back to JabRef, and click the refresh icon, <image src="BibliographyManagerTutorial/refresh.png" alt="refresh">, in the LibreOffice panel.</li>
+  <li>Toggle to LibreOffice. You will now see a References Cited section showing the Garvey2021 reference fully annotated.</li>
+  <li>Place your cursor at the beginning to the third sentence in your document. </li>
+  <li>Toggle to Jabref.</li>
+  <li>Select the Xie2018 reference.</li>
+  <li>In the LibreOffice panel, select Cite in-text.</li>
+  <li>Toggle back to LibreOffice. You should see Xie [2018], which is a commonly needed citation style.</li>
+  <li>In JabRef, change the citation style to Default [number] style file, and click OK.</li>
+  <li>Click the refresh icon, <image src="BibliographyManagerTutorial/refresh.png" alt="refresh">.</li>
+  <li>Toggle to LibreOffice where you will see your bibliography in number format, which is required by some journals. Unfortunately, neither of these two formats is consistent with <i>American Antiquity</i> format. Let's add an <i>AmericanAntiquity</i> format.</li>
+  <li>In JabRef, click Select Style.</li>
+  <li>In the pop-up window, click Add Style File.</li>
+  <li>Navigate to the AmericanAntiquity.jstyle file in the tutorial folder, and click Open.</li>
+  <li>Click the refresh icon, <image src="BibliographyManagerTutorial/refresh.png" alt="refresh">.</li>
+  <li>Toggle back to LibreOffice. You should now see your references formatted accorind to <i>American Antiquity</i> style.</li>
+</ol>
+
+<h1>Exercise</h1>
+Add three or more new references that pertain to your research. Make sure there is at least one article and one book. Add those references to your Writer document, and export the result in pdf format. 
+  
+  
+  
+  
+  
