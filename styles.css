@@ -8,6 +8,9 @@ body{
     p{
 	padding: 5px;
     }
+    .member{
+	min-height: 100px;
+    }
     h1{
 	padding: 15px;
     }

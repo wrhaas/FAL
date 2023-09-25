@@ -1,0 +1,108 @@
+<html>
+   <head>
+     <link href="styles.css" rel="stylesheet">
+  </head>
+  <body>
+    <p>
+      <a href="index.html"><img src="images/FAL_logo150.png" height="100" alt="FAL logo 150" style="float:left; margin:10px;"></a><h1>Members and affiliates</h1>
+    </p>
+<p align="middle" style="text-decoration:none; font-weight:bold; color:07416d; padding-top: 20px; padding-bottom: 20px;">
+      <a href="index.html">home</a> &ensp; | &ensp;
+      <a href="publications.html">publications</a> &ensp; | &ensp;
+      <a href="resources.html">resources</a> &ensp; | &ensp;
+      <a href="news.html">news</a> &ensp; | &ensp;
+      <a href="members.html">members</a> &ensp; | &ensp;
+      <a href="photos.html">photos</a> &ensp; | &ensp;
+      <a href="opportunities.html">opportunities</a> &ensp; | &ensp;
+      <a href="contribute.html">contribute</a>
+    </p>
+<center><img src="images/FCLBradyBunch.gif" alt="Brady Bunch" width="800" height="450"></center>
+<h2>Lab Members</h2>
+    <p class="member">
+      <img src="images/LlamaHaas200.png" alt="Haas" width="100" height="100" style="float:left; margin:5px;">Randy Haas
+      <br><i>Lab head</i>
+      <br><a href="https://www.uwyo.edu/anthropology/personnel/faculty/r-haas.html" target="_blank">assistant professor, University of Wyoming Department of Anthropology</a>
+      <br>ORCID: <a href="https://orcid.org/0000-0002-7742-2127" target="_blank">https://orcid.org/0000-0002-7742-2127</a>
+      <br>email: <a href="mailto:whaas@uwyo.edu" target="_blank">whaas@uwyo.edu</a>
+    </p>
+    <p class="member">
+      <img src="images/Viviano.png" alt="Viviano" width="100" height="100" style="float:left; margin:5px;">Carlos Viviano Llave
+      <br><i>co-director of Peruvian field research</i>
+    </p>
+    <p class="member">
+      <img src="images/VIncacona.png" alt="Virginia" width="100" height="100" style="float:left; margin:5px;">Virginia Inacoña Huaraya
+      <br><i>Lab coordinator, Peruvian field research</i>
+    </p>
+    <p class="member">
+      <img src="images/MIncacona.png" alt="Mateo" width="100" height="100" style="float:left; margin:5px;">Mateo Inacoña Huaraya
+      <br><i>Field coordinator, Peruvian field research</i>
+    </p>
+    <p class="member">
+      <img src="images/FloresBlanco.png" alt="Flores-Blanco" width="100" height="100"  style="float:left; margin:5px;">Luis FLores-Blanco
+      <br><a href="http://anthropology.ucdavis.edu/people/lfloresb" target="_blank">PhD candidate, University of California, Davis</a>
+    </p>
+    <p class="member">
+      <img src="images/Snyder.png" alt="Snyder" width="100" height="100" style="float:left; margin:5px;">Tom Snyder
+      <br><a href="https://anthropology.ucdavis.edu/people/tjsnyder" target="_blank">PhD candidate, University of California, Davis</a>
+    </p>
+    <p class="member">
+      <img src="images/Chen.png" alt="Chen" width="100" height="100" style="float:left; margin:5px;">Jennifer Chen
+      <br><a href="https://anth.la.psu.edu/people/juc1612" target="_blank">PhD candidate, Penn State University</a>
+    </p>
+     <p class="member">
+      <img src="images/Rosario.png" alt="Rosario" width="100" height="100" style="float:left; margin:5px;">Mikayla Rosario
+      <a href="https://www.uwyo.edu/anthropology/graduate-student-directory/students.html" target="_blank">PhD student, University of Wyoming Department of Anthropology</a>
+    </p>
+
+<h2>Former undergraduate lab members</h2>
+<a href="https://science.psu.edu/bmb/people/lcc177" target="_blank" rel="noopener noreferrer">Lauren Canale</a>, Caleb Chen, <a href="https://anth.la.psu.edu/people/juc1612" target="_blank">Jennifer Chen</a>, Esme Grundy, Izzie Guerrero, Parinita Kumari, Rachel Paul
+
+<h2>Collaborators</h2>
+<a href="https://www.ucmerced.edu/content/mark-aldenderfer" target="_blank" rel="noopener noreferrer">Mark Aldenderfer (UC Merced)</a>
+<a href="https://anthropology.osu.edu/people/downey.205" target="_blank" rel="noopener noreferrer">Sean Downey (Ohio State University)</a>
+<a href="http://anthropology.ucdavis.edu/people/jweerken" target="_blank" rel="noopener noreferrer">Jelmer Eerkens (UC Davis)</a>
+<a href="https://anthropology.dartmouth.edu/people/nathaniel-r-kitchel" target="_blank" rel="noopener noreferrer">Nathaniel Kitchel (Dartmouth College)</a>
+<a>BrieAnna Langlie (SUNY Binghamton)</a>
+<a href="https://anthropology.arizona.edu/user/steven-l-kuhn-sabbatical-fall-2017%E2%80%93spring-2018" target="_blank" rel="noopener noreferrer">Steven L. Kuhn (The University of Arizona)</a>
+<a href="https://anthropology.arizona.edu/user/barbara-mills" target="_blank" rel="noopener noreferrer">Barbara Mills (The University of Arizona)</a>
+<a href="http://anthropology.ucdavis.edu/people/moya" target="_blank" rel="noopener noreferrer">Cristina Moya (UC Davis)</a>
+<a href="http://www.csuchico.edu/anth/about/people/faculty/obrien-matthew.shtml" target="_blank" rel="noopener noreferrer">Matthew O'Brien (California state University)</a>
+<a href="http://www.uwyo.edu/anthropology/directory/m-murphy.html" target="_blank" rel="noopener noreferrer">Melissa Murphy (University of Wyoming)</a>
+<a href="https://forensicscience.ucdavis.edu/lecturers" target="_blank" rel="noopener noreferrer">Glendon Parker (UC Davis)</a>
+<a href="http://www.uwyo.edu/anthropology/directory/e-robinson.html" target="_blank" rel="noopener noreferrer">Erick Robinson (University of Wyoming)</a>
+<a href="https://sites.google.com/view/todd-surovell/home" target="_blank" rel="noopener noreferrer">Todd Surovell (University of Wyoming)</a>
+<a href="http://anthropology.ucr.edu/people/faculty/tsukamoto/index.html" target="_blank" rel="noopener noreferrer">Kenichiro Tsukamoto (UC Riverside)</a>
+<a href="https://anthropology.arizona.edu/user/james-t-watson" target="_blank" rel="noopener noreferrer">James Watson (The University of Arizona)</a>
+<a href="http://anthropology.ucdavis.edu/people/nzwyns" target="_blank" rel="noopener noreferrer">Nicholas Zwyns (UC Davis)</a>
+<a href="https://www.uwyo.edu/anthropology/graduate%20student%20directory/students.html" target="_blank" rel="noopener noreferrer">Madeline Mackie (University of Wyoming)</a>
+<h2>Citizen Scientists</h2>
+Bill Matthews (US Forest Service, retired)
+<h2>Affiliated Organizations and Projects</h2>
+<img src="https://collasuyo.files.wordpress.com/2014/09/cropped-cari-letterhead-trimmed-new-address.jpg" width="300" />
+<a href="https://collasuyo.wordpress.com/" target="_blank" rel="noopener noreferrer">Collasuyo Archaeological Research Institute</a>
+
+<img src="https://static.wixstatic.com/media/ac03da_688fb10451ef42a591d92cc1a69682e8~mv2_d_6702_4660_s_4_2.png/v1/crop/x_0,y_0,w_6702,h_3420/fill/w_266,h_137,al_c,usm_0.66_1.00_0.01/ac03da_688fb10451ef42a591d92cc1a69682e8~mv2_d_6702_4660_s_4_2.png" width="100" height="100" />
+<a href="https://www.langlielab.org/" target="_blank" rel="noopener noreferrer">Laboratory for Ancient Foods and Farming</a>
+
+<img src="http://fclab.faculty.ucdavis.edu/wp-content/uploads/sites/532/2018/06/cead-logofinal_1-300x300.png" width="100" height="100" />
+<a href="http://cead.ucdavis.edu/" target="_blank" rel="noopener noreferrer">Center for Experimental Archaeology at UC Davis</a>
+
+<img class="alignnone size-medium" src="https://sites.google.com/site/dukhaethnoarch/_/rsrc/1361150473058/home/small%20logo.jpg?height=199&amp;width=200" width="100" height="100" />
+<a href="https://sites.google.com/site/dukhaethnoarch/" target="_blank" rel="noopener noreferrer">Dukha Ethnoarchaeological Project</a>
+<h2>Contributors</h2>
+<img src="http://policy.asbmb.org/wp-content/uploads/2015/01/NSF.png" width="100" height="100" />
+<a href="https://www.nsf.gov/" target="_blank" rel="noopener noreferrer">The National Science Foundation</a>
+
+<img src="https://theccwh.org/wp-content/uploads/2016/09/logofade.gif" width="100" height="100" />
+<a href="https://www.amphilsoc.org/" target="_blank" rel="noopener noreferrer">American Philosophical Society</a>
+
+<img src="https://static1.squarespace.com/static/58f92966be659468d8af06ed/t/5994a9b9c534a540839092a8/1502915006189/instagram_PNG10.png" width="100" height="100" />
+<a href="http://www.arizona.edu/" target="_blank" rel="noopener noreferrer">The University of Arizona</a>
+
+<img src="https://pbs.twimg.com/profile_images/716064390022348800/JoemwvcN_400x400.jpg" width="70" height="70" />
+<a href="https://experiment.com/" target="_blank" rel="noopener noreferrer">Experiment.com</a>
+
+<img src="https://www.ucdavis.edu/sites/default/files/images/article/uc-davis-athletics-logo.png" width="90" height="120" />
+<a href="https://ls.ucdavis.edu/" target="_blank" rel="noopener noreferrer">UC Davis College of Letters and Science</a>
+<a href="http://socialsciences.ucdavis.edu/" target="_blank" rel="noopener noreferrer">UC Davis Institute for Social Science</a>
+<a href="http://anthropology.ucdavis.edu/" target="_blank" rel="noopener noreferrer">UC Davis Anthropology Department</a>
