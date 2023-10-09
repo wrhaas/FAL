@@ -1,0 +1,159 @@
+<head>
+    <link href="../styles.css" rel="stylesheet">
+  </head>
+
+<p><a href="../index.html"><img src="../images/FAL_logo150.png" height="100" align="left" alt="FAL logo 150" style="padding-right: 10px; padding-bottom: 10px;"></a></p>
+<h1>Spreadsheets with LibreOffice Calc: A step-by-step tutorial</h1>
+In this step-by-step tutorial, you will learn how to create and use an archaeological spreadsheet using the free, open-source software called, LibreOffice Calc. You will begin by creating a simple spreadsheet of fictious data and calculations that will look as follows:
+<br><img src="TutorialSpreadsheet/basic2.png" alt="basic table 2">
+
+<p>Many archaeological analyses require examination of datasets that consist of many observations. Human cognitive capacity constrains our ability to effectively manage and synthesize such large datasets. In order to derive insight from them, there are a number of computational tools available&ndash;statistical, database, and spreadsheet software. Here, you will learn how to enter, manage, and access data using a <i>spreadsheet</i>.</p>
+
+<p>A spreahsheet is a table of data that can be easily compiled and edited by individual users or small groups of users with few constraints. Spreadsheets are different from databases, which are more structured collections of related data tables that are often edited and accessed by many users (think banking databases). We will not engage with databases here, though they can be quite useful for archaeological research. Rather, we will focus on spreadsheets, which are more flexible and accessible to a wider range of users. Anyone can create and effectively deploy a spreadsheet without any advanced computer training.</p>
+
+<p>There are many spreadsheet software packages to choose from. This tutorial introduces LibreOffice because it is particularly powerful, free, open source, cross-platform, well documented, and has a large user community base. Moreover, LibreOffice resides on your computer&ndash;not the cloud&ndash;which is essential for archaeologists working in settings without Internet access.</p>
+
+<p>This step-by-step tutorial will take you through the process of creating and using an archaeological spreadsheet with an emphasis on commonly used procedures and tools. The process will be presented using actual archaeological data as examples. Although only basic functions are presented here, they are the foundations of more comlicated calculations and visualizations that can be performed in Calc. However, I recommend such computation using R statistical computing environment for such computations. R is the subject of another tutorial. The power of Calc is in simple data entry and management.</p>
+
+<h1>Installation</h1>
+<p>To complete this tutorial, you must install LibreOffice on your computer. LibreOffice is available for Windows, Mac, and Linux operating systems. Follow the installation instructions provided on the <a href="https://www.libreoffice.org/" target="_blank">LibreOffice</a> website. Instructions will vary by operating system and version. This tutorial is based on LibreOffice version 7.5.0. This tutorial is furthermore produced on linux <a href="https://ubuntu.com/" target="_blank">Ubuntu</a> 20.04 operating system, which may entail small (but sometimes frustrating) differences for users working with Mac or Windows operating systems. </p>
+
+<h1>Open a new spreadsheet</h1>
+<ol>
+  <li>Open LibreOffice. Use your favorite method, typically double-click on the LibreOffice icon on your Desktop or other location. I prefer to open a command line terminal and enter <code>libreoffice</code>. This may seem silly, but it is actually the fastest way to open the software once you get used to it. Whatever approach you take, the following screen will appear:
+    <br><img src="TutorialSpreadsheet/StartPage.png" alt="LOW opening screen"></li>
+  <li>Click the green table icon that says "Calc Spreadsheet" to open a new spreadsheet document.</li>
+  <li>A blank spreadsheet will appear as a grid with numbered rows and lettered columns. Each box of in the grid is called a cell. When you open the spreadsheet, cell 1A is highlighed and active. It will looks something like this:
+      <br><img src="TutorialSpreadsheet/blank.png" alt="blank table"></li>
+</ol>
+
+<h1>Enter and save data</h1>
+<ol>
+  <li>With cell 1A highlighted, type "site", and hit enter. We've created a column called sites, which will contain archaeological site names.</li>
+  <li>In cell 2A, enter, "A". You can see that we are starting to create a list of sites in column A, starting with site A.</li>
+  <li>Go down column A, iteratively entering the following site names: "B", "C", and "D" into rows 3, 4, and 5, respectively.</li>
+  <li>Let's take a moment to save your document. You can simply click "File" from the File menu bar and select, "Save As". Alternatively, you can use the keyboard shortcut, "Ctrl+s" (holding down the Ctrl key, hit the letter "s"). I highly recommend using this keystroke shortcut and making it a regular habit to use it periodically while drafting a document. Getting into this habit will reduce the chances of catastrophic data loss (though, LibreOffice does have a robust document recovery system).</li>
+  <li>Place your cursor in cell 1B, and enter "longitude". Longitude refers to geographic coordinates, which is a commonly recorded attribute of archaeolgoical sites.</li>
+  <li>Enter the following longitude values: -97.4365, -97.4386, -97.4567, -97.4297</li>
+  <li>Add a third column called latitude, and enter the following values: 21.4645, 21.3567, 21.4610, 21.4895 </li>
+  <li>Add the following four additional columns and associated data:
+    <ol>
+      <li>length.m: 980,35,140,42</li>
+      <li>width.m: 510,60,125,65</li>
+      <li>structures: 105,2,25,3</li>
+      <li>period: Late Period, Early Period, Middle Period, Middle Period</li>
+    </ol>
+  </li>
+  <li>Note that the ".m" associated with length and width is to remind us that the units are meters.</li> 
+  <li>Your spreadsheet should look something like this:
+    <br><img src="TutorialSpreadsheet/basic.png" alt="basic table">
+    <br>If so, you've successfully created a basic spreadsheet. Have you saved recently? Take a moment to do so (Ctrl+s).</li>
+</ol>
+
+<h1>Format cells</h1>
+<ol>
+  <li>Notice that the latitude for site C looks different than the rest&ndash;it'one digit short because Calc has automatically left out the zero. For most purposes, this is not a problem, but sometimes we want to be explicit that the zero is meaningful. To specify the number of significant digits, we can format the column.</li>
+  <li>To do that, right click on the letter C of Column C, and select Format Cells in the dropdown menu.</li>
+  <li>In the Numbers tab, under Options, set the Decimal places to 4, and click OK. You should now see the zero re-appear in the latitude value of site C.</li>
+  <li>Have you saved recently? Take a moment to do so (Ctrl+s).</li>
+</ol>
+
+<h1>Output data</h1>
+There are many ways to output your data from a Calc spreadsheet to use for other purposes. We will explore three&ndash;copy-and-paste, comma separated value output, and excel output.
+<h2>Copy-and-paste</h2>
+Often, you simply need to display a relatively small data table in a word processing document. To do that, a simple copy-and-paste will accomplish that, but there's a trick.
+<ol>
+    <li>Select your data cells for the spreadsheet you just created by left-clicking on cell 1A and dragging to the lower-right most cell in your table.</li>
+    <li>With the data highlighted, copy the data either using the keyboard shortcut, Ctrl+c, or by selecting Edit, Copy from the File menu bar.</li>
+    <li>Open a blank LibreOffice Writer document by selecting File, New, Text document in the File menu bar. A blank word-processing document will appear.</li>
+    <li>Right click in that blank document, and click Paste Special, Paste Special.</li>
+    <li>Select Rich text formatting (RTF) from the list. Your table should appear in the document. It can be formatted to your liking or style-guide instructions. See the LibreOffice Writer tutorial to learn how to format a table in <i>American Antiquity</i> style.</li>
+    <li>Why did we use the RTF format? Why not simply paste the table as is? Indeed, you can do that, but in my experience, all other pasting formats are difficult to work with. RTF offers a clean table that can be easily formatted using standard word processor tools. Nonetheless, feel free to explore other paste options to find one that works well for you.</li>
+</ol>
+ 
+<h2>Comma separated value and Excel formats</h2>
+A number of common data sharing and analysis tasks require comma separated value (csv) or Microsoft Excel (xls and xlsx) formatted data tables. Csv files are simple, non-proprietary text files (a type of file known as an ascii file) that virtually any word-processing or data analysis software can read. Csv format is an excllent format for data sharing (e.g., including as supplementary material to a paper or web-sharing of data) because it will be accessible to anyone regardles of preferred computing platforms of software. I therefore recommend the use of this format for most purposes. However, it is common to work with colleagues who are unfamiliar with this format and are simply more comfortable with Excel files (xls or xlsx).  This section explains how to create csv and xls files from your Calc spreadsheet (ods).
+<ol>
+      <li>Select File, Save a Copy from the File menu bar.
+	<p>Although you could also do this using the "Save As" option, it's often preferable to use Save a Copy so that your Calc (ods) document remains open for additional editing. Moreover, a csv file will not save any special formatting or formulas that you might want to access later (more on formulas below).</p></li>
+      <li>In the pop-up window, select the directory where you would like to store you file.</li>
+      <li>From the dropdown menu in the lower right, select Text CSV (.csv).</li>
+      <li>Type a name in the Name entry box. This will default to the same name as your Calc file, which you can simply accept. Make sure that the extension, ".ods" does not appear in the Name. If so, delete.</li>
+      <li>Click the Save button in the top right corner of the pop-up window.</li>
+      <li>Another pop-up window, titled Export Text File, will appear. Make sure it has the following settings:
+	<ul>
+	  <li>Character set: Unicode (UTF-8)</li>
+	  <li>Field delimiter: ,</li>
+	  <li>String delimiter: "</li>
+	  <li>Uncheck all check boxes.</li>
+	</ul>
+      </li>
+      <li>Click OK. You've now output a csv file.</li>
+      <li>Use your computer's file browser to navigate to the csv file you just created.</li>
+      <li>Right click on your csv file, choose Open With Other Application, and open with Text Editor. Note that this step will differ by operating system. You are looking to open the file with a basic text editor such as Notepad.</li>
+      <li>You should see a simple comma-separated data file that looks like this (again, details will vary):
+	<br><img src="TutorialSpreadsheet/csv.png" alt="csv file"></li>
+      <li>There is nothing more to do here. This just shows you what a csv file is and helps you understand why its so flexible for the purpose of data sharing.</li>
+      <li>Close your csv file.</li>
+</ol>
+
+<h1>Calculations</h1>
+Calc makes basic calculations simple. Here you will learn to do basic arithmetic and produce summary statistics.
+<h2>Summing</h2>
+Suppose you would like to sum the number of structures found among your archaeological sites. This is a fairly simple calculation, but Calc makes it even simpler.
+<ol>
+  <li>Type, stats, in cell 7A. This is simply for reference.</li>
+
+  <li>Click once on cell 6F, which is just below your last structures value.</li>
+  <li>Type <code>=sum(</code></li>
+  <li>Click and drag across cells 2F to 5F (all of the structures values).</li>
+  <li>Type <code>)</code> and Enter.</li>
+  <li>You should see a new value appear, 135, which is the sum of the longitude values.
+    <p>Double click on your sum cell, 6F. You should see you value change to your formular. If you ever need to edit a formula, this is one place you could do that. We will not make any changes here, so just hit your escape key (Esc) for now.</li>
+</ol>
+
+<h2>Averaging</h2>
+Suppose you would like to find the center point of your study area. To do this, you can find the average of your latitude and longitude values. This would take a little time by hand, but calc makes it quick and easy.
+<ol>
+  <li>Click once on cell 6B, which is just below your last longitude value.</li>
+  <li>Type <code>=average(</code></li>
+  <li>Click and drag across cells 2A to 5A (all of the longitude values).</li>
+  <li>Type <code>)</code> and Enter.</li>
+  <li>You should see a new value appear, -97.44037, which is the average of the longitude values.</li>
+  <li>Notice that this new value has added an extra decimal place, which may reflect a degree of false precision given that the longitude data are resolved to four decimal places. Fix this by following the earlier instruction on formatting cells.</li>
+  <li>While you could reproduce the above steps to find the average of the latitude values, here's a convenient shortcut: single click on cell 6B (the cell with your average longitude). You will see a thick black line highlighting the cell, and a  handle (small square) on the lower right. Click and drag than handle into cell 6C. You should now see the average of the latitude values.</li>
+  <li>Note that there are many other basic statistical functions that can be easily performed in this way&ndash;minimum (<code>min</code>), maximum (<code>max</code>), standard deviation (<code>std</code>), median (<code>median</code>), and more. Feel free to experiment, and consult the LibreOffice help or web as needed.</li> 
+
+</ol>
+
+<h2>Arithmetic</h2>
+Suppose you would like to estimate site area using the length and width measurements for your site. Area is simply <code>lengt * width</code>, which Calc can solve quickly. Note that the asterisk is a typical symbol used for multiplication.<ol>
+  <li>Add a new column after the width.m column by right clicking on column F and selecting Insert Columns Before.</li>
+  <li>Enter "area.m2" into cell 2F for our column header. The "m2" indicates that the units are square meters.</li>
+  <li>Select cell 2F.</li>
+  <li>Type <code>=</code></li>
+  <li>Click on cell 2D, which is your first length.m value.</li>
+  <li>Type, <code>*</code></li>
+  <li>Click on cell 2E, which is your first width.m value.</li>
+  <li>Enter. You should now see the calculation result.</li>
+  <li>Again, you could repeat this for each row to estimate the area for the other sites. However, you can use the shortcut described about by clicking and dragging the selection handle on cell 2B to cell 2D. The area will be calculated for all sites.</li>
+  <li>Now that you found the site area for your five sites, add a forumula to cell 6F that calculates average site area.</li>
+  <li>Note that there are many other basic arithmetic functions that can be easily performed in this way&ndash;addition (<code>+</code>), subtraction (<code>-</code>), division (<code>/</code>), raising to a power (<code>^</code>), and more. Feel free to experiment, and consult the LibreOffice help or web as needed.</li> 
+  <li>Have you saved recently? Take a moment to do so (Ctrl+s).</li>
+</ol>
+
+<h2>Sorting</h2>
+Suppose you would like to organize your table by site size.
+<ol>
+  <li>Click and drag your cursor to highlight cells 1A to 5H. <b>Warning</b>: When sorting data tables, always remember to always select all relvant cells. If you sort data without doing so, you will indpently sort data and thus lose information. For example, if you sort the site size column here without highlighting the other fields, and you save the result, the next time you open your file, you will not know which site size values belong to which sites. I have seen massive data collection efforts completely upended because of this mistake, and this is one reason to consider using relational databases, which have safeguards against such mistakes. But spreadsheets still have their place. Just be aware of this problem and consider yourself warned.</li>
+  <li>Select Data, Sort from the File menu bar.</li>
+  <li>In the Sort pop-up menu, open the Options tab.</li>
+  <li>Make sure that "Range contains column heads" is checked.</li>
+  <li>Go back to the Sort Criteria tab.</li>
+  <li>Select area.m2 from the Sort Key 1 dropdown, and check Descending.</li>
+  <li>Click OK. You should now see your sites organized from largest at the top to smallest at the bottom.</li>
+  <li>That concludes your work with the basic.ods file. Save your file and close the file.</li>
+</ol>
+
+<h1>Import data</h1>
+Often you will need import data that are not in ods format&ndash;csv, xls, xlsx, dbf, txt, to name a few. Simply open LibreOffice Calc, and open those file formats in the same way that you would open an ods file.
