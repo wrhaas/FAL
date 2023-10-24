@@ -1,0 +1,41 @@
+#Journal of Archaeological Research jstyle file by Randy Haas 2023
+NAME
+JAR Author-year citation
+
+JOURNALS
+Journal of Archaeological Research
+
+PROPERTIES
+Title=References Cited
+IsSortByPosition=false
+IsNumberEntries=false
+ReferenceParagraphFormat="JAR"
+ReferenceHeaderParagraphFormat="Heading 1"
+
+CITATION
+AuthorField=author/editor
+YearField=year
+MaxAuthors=6
+AuthorSeparator=, 
+AuthorLastSeparator= and 
+EtAlString= et al.
+YearSeparator= 
+InTextYearSeparator= 
+BracketBefore=(
+BracketAfter=)
+CitationSeparator=; 
+UniquefierSeparator=, 
+
+LAYOUT
+article=\format[AuthorLastFirstAbbreviator,NoSpaceBetweenAbbreviations,AuthorAndsCommaReplacer,Replace( &,\, and)]{\author} (\format[FormatChars]{\year}\uniq) \format[FormatChars]{\title}. <i>\journal</i>, \volume, \format[FormatPagesForHTML]{\pages}. \begin{doi}doi:\format[DOIStrip]{\doi}\end{doi}
+
+book=\format[AuthorLastFirstAbbreviator,NoSpaceBetweenAbbreviations,AuthorAndsCommaReplacer,Replace( &,\, and)]{\author}\begin{editor}\format[AuthorLastFirstAbbreviator,NoSpaceBetweenAbbreviations,AuthorAndsCommaReplacer,Replace( &,\, and)]{\editor} (Ed.)\end{editor}, (\year\uniq) <i>\format[FormatChars]{\title}</i>. \format[FormatChars]{\publisher}, \format[FormatChars]{\address}. \begin{doi}doi:\format[DOIStrip]{\doi}\end{doi}
+
+incollection=\format[AuthorLastFirstAbbreviator,NoSpaceBetweenAbbreviations,AuthorAndsCommaReplacer,Replace( &,\, and)]{\author} (\year\uniq) \format[FormatChars]{\title}. In: \format[AuthorLastFirstAbbreviator,NoSpaceBetweenAbbreviations,AuthorAndsCommaReplacer,Replace( &,\, and)]{\editor} (Ed.), <i>\format[FormatChars]{\booktitle}</i>, \format[FormatChars]{\publisher}, \format[FormatChars]{\address}. \begin{doi}doi:\format[DOIStrip]{\doi}\end{doi}
+
+inbook=\format[AuthorLastFirstAbbreviator,NoSpaceBetweenAbbreviations,AuthorAndsCommaReplacer,Replace( &,\, and)]{\author} (\year\uniq). \format[FormatChars]{\chapter}. In: \format[AuthorLastFirstAbbreviator,NoSpaceBetweenAbbreviations,AuthorAndsCommaReplacer,Replace( &,\, and)]{\editor} (Ed.), <i>\format[FormatChars]{\title}</i>, \format[FormatChars]{\publisher}, \format[FormatChars]{\address}. \begin{doi}doi:\format[DOIStrip]{\doi}\end{doi}
+
+unpublished=\format[AuthorLastFirstAbbreviator,NoSpaceBetweenAbbreviations,AuthorAndsCommaReplacer,Replace( &,\, and)]{\author} (\format[FormatChars]{\year}\uniq) \format[FormatChars]{\title}. \note.
+
+default=\format[AuthorLastFirstAbbreviator,NoSpaceBetweenAbbreviations,AuthorAndsCommaReplacer,Replace( &,\, and)]{\author} (\year\uniq) \format[FormatChars]{\title}. \journal, \volume, \format[FormatPagesForHTML]{\pages}.
+

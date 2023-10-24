@@ -1,0 +1,41 @@
+#Journal of Archaeological Method and Theory jstyle file by Randy Haas 2023
+NAME
+JAMT Author-year citation
+
+JOURNALS
+Journal of Archaeological Method and Theory
+
+PROPERTIES
+Title=References
+IsSortByPosition=false
+IsNumberEntries=false
+ReferenceParagraphFormat="JAMT"
+ReferenceHeaderParagraphFormat="Heading 1"
+
+CITATION
+AuthorField=author/editor
+YearField=year
+MaxAuthors=2
+AuthorSeparator=, 
+AuthorLastSeparator= & 
+EtAlString= et al.
+YearSeparator= 
+InTextYearSeparator= 
+BracketBefore=(
+BracketAfter=)
+CitationSeparator=; 
+UniquefierSeparator=, 
+
+LAYOUT
+article=\format[AuthorLastFirstAbbreviator,NoSpaceBetweenAbbreviations,AuthorAndsCommaReplacer,Replace( \, &)]{\author} (\format[FormatChars]{\year}\uniq). \format[FormatChars]{\title}. <i>\journal</i>, \volume, \format[FormatPagesForHTML]{\pages}. \begin{doi}https://doi.org/\format[DOIStrip]{\doi}\end{doi}
+
+book=\format[AuthorLastFirstAbbreviator,NoSpaceBetweenAbbreviations,AuthorAndsCommaReplacer,Replace( \, &)]{\author}\begin{editor}\format[AuthorLastFirstAbbreviator,NoSpaceBetweenAbbreviations,AuthorAndsCommaReplacer,Replace( \, &)]{\editor} (Ed.)\end{editor}, (\year\uniq). <i>\format[FormatChars]{\title}</i>. \format[FormatChars]{\publisher}. \begin{doi}https://doi.org/\format[DOIStrip]{\doi}\end{doi}
+
+incollection=\format[AuthorLastFirstAbbreviator,NoSpaceBetweenAbbreviations,AuthorAndsCommaReplacer,Replace( \, &)]{\author} (\year\uniq). \format[FormatChars]{\title}. In \format[AuthorLastFirstAbbreviator,NoSpaceBetweenAbbreviations,AuthorAndsCommaReplacer,Replace( \, &)]{\editor} (Eds.), <i>\format[FormatChars]{\booktitle}</i> (pp. \format[FormatPagesForHTML]{\pages}). \format[FormatChars]{\publisher}. \begin{doi}https://doi.org/\format[DOIStrip]{\doi}\end{doi}
+
+inbook=\format[AuthorLastFirstAbbreviator,NoSpaceBetweenAbbreviations,AuthorAndsCommaReplacer,Replace( \, &)]{\author} (\year\uniq). \format[FormatChars]{\chapter}. In \format[AuthorLastFirstAbbreviator,NoSpaceBetweenAbbreviations,AuthorAndsCommaReplacer,Replace( \, &)]{\editor} (Eds.), <i>\format[FormatChars]{\title}</i>  (pp. \format[FormatPagesForHTML]{\pages}). \format[FormatChars]{\publisher}. \begin{doi} https://doi.org/\format[DOIStrip]{\doi}\end{doi}
+
+unpublished=\format[AuthorLastFirstAbbreviator,NoSpaceBetweenAbbreviations,AuthorAndsCommaReplacer,Replace( \, &)]{\author} (\format[FormatChars]{\year}\uniq). \format[FormatChars]{\title}. \note.
+
+default=\format[AuthorLastFirstAbbreviator,NoSpaceBetweenAbbreviations,AuthorAndsCommaReplacer,Replace( \, &)]{\author} (\year\uniq). \format[FormatChars]{\title}. \journal, \volume, \format[FormatPagesForHTML]{\pages}.
+

@@ -1,0 +1,39 @@
+#Nature jstyle file by Randy Haas 2023
+
+NAME
+Nature Number
+
+JOURNALS
+Nature and Scientific Reports
+
+PROPERTIES
+Title="References"
+IsSortByPosition="true"
+IsNumberEntries="true"
+ReferenceParagraphFormat="Hanging indent"
+ReferenceHeaderParagraphFormat="Heading 1"
+
+CITATION
+AuthorField="author/editor"
+BracketBefore="["
+BracketAfter="]"
+BracketBeforeInList=""
+BracketAfterInList=". "
+CitationSeparator=", "
+UniquefierSeparator=", "
+MultiCiteChronological="true"
+MinimumGroupingCount=3
+CitationCharacterFormat="Text Body"
+
+LAYOUT
+article=\format[Authors(LastFirst,Initials,AMP)]{\author}, \title. <i>\journal</i><b>\volume\begin{number}\end{number}</b>, \format[FormatPagesForHTML]{\pages} (\year\uniq).\begin{doi} doi:\format[DOIStrip]{\doi}\end{doi}
+
+book=\begin{author}\format[Authors(LastFirst,Initials,AMP)]{\author}\end{author}\begin{editor}\format[Authors(LastFirst,Initials,AMP)]{\editor} (\format[IfPlural(Eds.,Ed.)]{\editor})\end{editor} <i>\title</i>\begin{volume} (Vol. \volume)\end{volume} (\publisher, \year\uniq\begin{edition} [\edition edition]\end{edition}).\begin{doi} doi:\format[DOIStrip]{\doi}\end{doi}
+
+incollection=\format[Authors(LastFirst,Initials,AMP)]{\author} \title. In <i>\Booktitle</i>\begin{volume} (Vol. \volume)\end{volume}, \format[Authors(LastFirst,Initials]){\editor}, (\format[IfPlural(Eds.,Edition)]{\editor})\end{editor} (\publisher, \year\uniq\begin{edition} [\edition edition]\end{edition}) pp. \format[FormatPagesForHTML]{\pages}.\begin{doi} doi:\format[DOIStrip]{\doi}\end{doi}
+
+inbook= \format[Authors(LastFirst,Initials,AMP)]{\author} "\chapter", in <i>\Booktitle</i>\begin{volume} (Vol. \volume)\end{volume}, \format[Authors(LastFirst,Initials]){\editor}, (\format[IfPlural(Eds.,Ed.)]{\editor})\end{editor} (\publisher, \year\uniq\begin{edition} [\edition edition]\end{edition}) pp. \format[FormatPagesForHTML]{\pages}.\begin{doi} doi:\format[DOIStrip]{\doi}\end{doi}
+
+unpublished=\format[Authors(FirstLast,FullName)]{\author} <i>\title</i>. \note (\year\uniq).
+
+default=\format[Authors(LastFirst,Initials,AMP)]{\author} \title. <i>\journal, \volume</i>\begin{number}(\number)\end{number}, \format[FormatPagesForHTML]{\pages}  (\year\uniq).\begin{doi} doi:\format[DOIStrip]{\doi}\end{doi}

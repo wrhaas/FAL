@@ -1,0 +1,35 @@
+#PLoS jstyle file by Randy Haas 2023
+
+NAME
+PLoS Number
+
+JOURNALS
+PLoS ONE
+
+PROPERTIES
+Title="References"
+IsSortByPosition="true"
+IsNumberEntries="true"
+ReferenceParagraphFormat="Hanging indent"
+ReferenceHeaderParagraphFormat="Heading 1"
+
+CITATION
+AuthorField="author/editor"
+BracketBefore="["
+BracketAfter="]"
+BracketBeforeInList=""
+BracketAfterInList=". "
+CitationSeparator=", "
+UniquefierSeparator=", "
+MultiCiteChronological="true"
+MinimumGroupingCount=3
+CitationCharacterFormat="Text Body"
+
+LAYOUT
+article=\format[Authors(LastFirst,InitialsNoSpace,NoPunc,Comma,Comma)]{\author}. \title. \journal \year\uniq\begin{volume};\volume\end{volume}\begin{numer}(\number)\end{number}\begin{pages}:\format[FormatPagesForHTML]{\pages}\end{pages}.\begin{doi} doi:\format[DOIStrip]{\doi}.\end{doi}
+
+book=\begin{author}\format[Authors(LastFirst,InitialsNoSpace,NoPunc,Comma,Comma)]{\author}\end{author}\begin{editor}\format[Authors(LastFirst,InitialsNoSpace,NoPunc,Comma,Comma)]{\editor}\format[IfPlural( editors, editor)]{\editor}\end{editor}. \title\begin{volume}(Vol. \volume)\end{volume}\begin{edition}[\edition]\end{edition}. \address: \publisher; \year\uniq.\begin{doi} doi:\format[DOIStrip]{\doi}.\end{doi}
+
+incollection=\format[Authors(LastFirst,InitialsNoSpace,NoPunc,Comma,Comma)]{\author}. \title. In: \format[Authors(LastFirst,InitialsNoSpace,NoPunc,Comma,Comma)]{\editor}\format[IfPlural( editors, editor)]{\editor}\end{editor}. \Booktitle\begin{volume} (Vol. \volume)\end{volume}\begin{edition}[\edition]\end{edition}. \address: \publisher; \year\uniq.\begin{doi} doi:\format[DOIStrip]{\doi}.\end{doi}
+
+default=\format[Authors(LastFirst,InitialsNoSpace,NoPunc,Comma,Comma)]{\author}. \title.\begin{note} \note.\end{note}\begin{address} \address \end{address}\year\uniq.

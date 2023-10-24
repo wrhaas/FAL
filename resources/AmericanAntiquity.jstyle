@@ -1,0 +1,49 @@
+#American Antiquity and Latin American Antiquity jstyle file by Randy Haas 2023
+
+NAME
+AQ Author-year citation
+
+JOURNALS
+American Antiquity
+
+PROPERTIES
+Title="References Cited"
+IsSortByPosition="false"
+IsNumberEntries="false"
+ReferenceParagraphFormat="Hanging indent"
+ReferenceHeaderParagraphFormat="Heading 1"
+
+CITATION
+AuthorField="author/editor"
+YearField="year"
+MaxAuthors="2"
+MaxAuthorsFirst="2"
+AuthorSeparator=", "
+AuthorLastSeparator=" and " 
+EtAlString=" et al."
+YearSeparator=" "
+InTextYearSeparator=" "
+BracketBefore="("
+BracketAfter=")"
+CitationSeparator="; "
+UniquefierSeparator=", "
+MultiCiteChronological="false"
+PageInfoSeparator=": "
+CitationCharacterFormat="Text Body"
+
+LAYOUT
+article=\format[Authors(LastFirstFirstFirst,Fullname)]{\author} \year\uniq  \title. <i>\journal</i> \volume\begin{number}(\number)\end{number}:\format[FormatPagesForHTML]{\pages}.\begin{doi} doi:\format[DOIStrip]{\doi}\end{doi}
+
+book=\begin{author}\format[Authors(LastFirstFirstFirst,Fullname)]{\author}\end{author}\begin{editor}\format[Authors(LastFirst,Fullname)]{\editor} (\format[IfPlural(Eds.,Ed.)]{\editor})\end{editor} \year\uniq  <i>\title</i>\begin{edition} (\edition ed.)\end{edition}\begin{volume} (Vol. \volume)\end{volume}. \publisher, \address.\begin{doi} doi:\format[DOIStrip]{\doi}\end{doi}
+
+incollection=\format[Authors(LastFirstFirstFirst,Fullname)]{\author} \year\uniq  \title. In <i>\Booktitle</i>\begin{edition} (\edition ed.)\end{edition}\begin{volume} (Vol. \volume)\end{volume}, edited by \format[Authors(FirstLast,Fullname]){\editor}, pp. \format[FormatPagesForHTML]{\pages}.\begin{series} \series.\end{series} \publisher, \address.\begin{doi} doi:\format[DOIStrip]{\doi}\end{doi}
+
+inbook= \format[Authors(LastFirstFirstFirst,Fullname)]{\author} \year\uniq  \chapter. In <i>\Booktitle</i>\begin{edition} (\edition ed.)\end{edition}\begin{volume} (Vol. \volume)\end{volume}, edited by \format[Authors(FirstLast,Fullname]){\editor}, pp. \format[FormatPagesForHTML]{\pages}.\begin{series} \series.\end{series} \publisher, \address.\begin{doi} doi:\format[DOIStrip]{\doi}\end{doi}
+
+phdthesis=\format[Authors(LastFirstFirstFirst,FullName)]{\author} \year\uniq <i>\title</i> PhD Dissertation, \school, \address.
+
+mastersthesis=\format[Authors(LastFirstFirstFirst,Fullname)]{\author} \year\uniq <i>\title</i> Master's Thesis, \school, \address.
+
+unpublished=\format[Authors(LastFirstFirstFirst,FullName)]{\author} \year\uniq \title. \note.
+
+default=\format[Authors(LastFirstFirstFirst,Fullname)]{\author} \year\uniq \title. <i>\journal, \volume</i>\begin{number}(\number)\end{number}, \format[FormatPagesForHTML]{\pages}.\begin{doi} doi:\format[DOIStrip]{\doi}\end{doi}

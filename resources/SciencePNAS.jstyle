@@ -1,0 +1,37 @@
+#Science and PNAS jstyle file by Randy Haas 2023
+
+NAME
+SciPNAS Number
+
+JOURNALS
+Science and PNAS
+
+PROPERTIES
+Title="References"
+IsSortByPosition="true"
+IsNumberEntries="true"
+ReferenceParagraphFormat="Hanging indent"
+ReferenceHeaderParagraphFormat="Heading 1"
+
+CITATION
+AuthorField="author/editor"
+BracketBefore="("
+BracketAfter=")"
+CitationSeparator=", "
+UniquefierSeparator=", "
+MultiCiteChronological="true"
+MinimumGroupingCount=3
+CitationCharacterFormat="Text Body"
+
+LAYOUT
+article=\format[Authors(FirstLast,Fullname)]{\author}, \title. <i>\journal</i><b>\volume\begin{number}\end{number}</b>, \format[FormatPagesForHTML]{\pages} (\year\uniq).\begin{doi} doi:\format[DOIStrip]{\doi}\end{doi}
+
+book=\begin{author}\format[Authors(FirstLast,Fullname)]{\author}\end{author}\begin{editor}\format[Authors(FirstLast,Fullname)]{\editor} (\format[IfPlural(Eds.,Ed.)]{\editor})\end{editor} <i>\title</i>\begin{edition} (\edition ed.)\end{edition}\begin{volume} (Vol. \volume)\end{volume} (\publisher, \year\uniq). \begin{doi}doi:\format[DOIStrip]{\doi}\end{doi}
+
+incollection=\format[Authors(FirstLast,Fullname)]{\author} "\title," in <i>\Booktitle</i>\begin{edition} (\edition ed.)\end{edition}\begin{volume} (Vol. \volume)\end{volume}, \format[Authors(FirstLast,Fullname]){\editor}, (\format[IfPlural(Eds.,Ed.)]{\editor})\end{editor} (\publisher, \year\uniq) pp. \format[FormatPagesForHTML]{\pages}. \begin{doi}doi:\format[DOIStrip]{\doi}\end{doi}
+
+inbook= \format[Authors(FirstLast,Fullname)]{\author} "\chapter", in <i>\Booktitle</i>\begin{edition} (\edition ed.)\end{edition}\begin{volume} (Vol. \volume)\end{volume}, \format[Authors(FirstLast,Fullname]){\editor}, (\format[IfPlural(Eds.,Ed.)]{\editor})\end{editor} (\publisher, \year\uniq) pp. \format[FormatPagesForHTML]{\pages}. \begin{doi}doi:\format[DOIStrip]{\doi}\end{doi}
+
+unpublished=\format[Authors(FirstLast,FullName)]{\author} <i>\title</i>. \note (\year\uniq).
+
+default=\format[Authors(FirstLast,Fullname)]{\author} \title. <i>\journal, \volume</i>\begin{number}(\number)\end{number}, \format[FormatPagesForHTML]{\pages}  (\year\uniq).\begin{doi} doi:\format[DOIStrip]{\doi}\end{doi}
