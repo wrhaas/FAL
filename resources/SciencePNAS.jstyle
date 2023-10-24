@@ -1,10 +1,11 @@
 #Science and PNAS jstyle file by Randy Haas 2023
 
 NAME
-SciPNAS Number
+SciencePNAS Number
 
 JOURNALS
-Science and PNAS
+Science
+Proceedings of the National Academy of Sciences
 
 PROPERTIES
 Title="References"
