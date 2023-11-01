@@ -1,7 +1,7 @@
 #Radiocarbon calibration using Bchron by Randy Haas 2023
 #returns most-likely date and confidence intervals for a given 14C date and calibration curve
 library(Bchron)
-cal14C<-function(age,sd,calCurve,id,plot=TRUE){
+cal14C<-function(age,sd,calCurve,id,plot=FALSE){
     cal<-BchronCalibrate(ages=age,ageSds=sd,calCurves=calCurve)#calibrate the 14C date
 
                                        #compute confidence intervals.
@@ -16,18 +16,18 @@ cal14C<-function(age,sd,calCurve,id,plot=TRUE){
     df$CI99<-replace(df$density,df$cs>.99,NA)
     df<-df[order(df$year),]
 
-    #plotting
-    if(plot==TRUE){
-        par(mar=c(4,4,1,3))
-        plot(0,xlim=rev(range(cal$Date1$ageGrid)),ylim=range(cal$Date1$densities),xlab="calendar year BP",ylab="density",bty="n")
-        abline(h=min(df$density[!is.na(df$CI68)]),col="gray",lty=2)
-        abline(h=min(df$density[!is.na(df$CI95)]),col="gray",lty=2)
-        abline(h=min(df$density[!is.na(df$CI99)]),col="gray",lty=2)
-        mtext(text=c("68%","95%","99%"),side=4,line=.5,las=2,at=c(min(df$density[!is.na(df$CI68)]),min(df$density[!is.na(df$CI95)]),min(df$density[!is.na(df$CI99)])))
-        polygon(x=c(min(cal$Date1$ageGrid),cal$Date1$ageGrid,max(cal$Date1$ageGrid)),y=c(0,cal$Date1$densities,0),col="gray")
-    }
-    
-    list(
+    #produce violin plot
+    plot(x=NULL,y=NULL,"n",ylim=c(0,2),xlim=rev(range(cal$Date1$ageGrid)),bty="n",xlab="calendar years before present",ylab=NA,yaxt="n")
+    abline(v=pretty(cal$Date1$ageGrid),col="gray",lty=2)
+    abline(h=1,col="gray",lty=2)
+
+    sf<-.4/max(cal$Date1$densities)#scale factor
+    polygon(x=c(cal$Date1$ageGrid,rev(cal$Date1$ageGrid)),y=c(cal$Date1$densities*sf,-rev(cal$Date1$densities*sf))+1,col="gray")
+
+    mtext(side=2,text=id,at=1,las=2)
+    axis(3,labels=F)
+
+        list(
         id=id,
         date=age,
         sd=sd,
@@ -39,4 +39,3 @@ cal14C<-function(age,sd,calCurve,id,plot=TRUE){
         CI99=paste(rev(range(df$year[!is.na(df$CI99)])),collapse="-")
     )
 }
-
