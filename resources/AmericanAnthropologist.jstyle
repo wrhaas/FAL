@@ -6,7 +6,7 @@ JOURNALS
 American Anthropologist
 
 PROPERTIES
-Title=""
+Title="References Cited"
 IsSortByPosition="false"
 IsNumberEntries="false"
 ReferenceParagraphFormat="Hanging indent"
@@ -37,15 +37,10 @@ MultiCiteChronological="false"
 PageInfoSeparator=": "
 
 LAYOUT
-article=\format[Authors(LastFirst,Fullname)]{\author} (\year\uniq). \title. <i>\journal, \volume</i>\begin{number}(\number)\end{number}, \format[FormatPagesForHTML]{\pages}. \begin{doi}doi:\format[DOIStrip]{\doi}\end{doi}
+article=\format[Authors(LastFirst,Fullname)]{\author}. \year\uniq. "\title." <i>\journal</i> <b>\volume</b>\begin{number}(\number)\end{number}\begin{pages}:\end{pages}\format[FormatPagesForHTML]{\pages}. \begin{doi}doi:\format[DOIStrip]{\doi}\end{doi}
 
-book=\begin{author}\format[Authors(LastFirst)]{\author}\end{author}\begin{editor}\format[Authors(LastFirst,Initials,Amp,7)]{\editor} (\format[IfPlural(Eds.,Ed.)]{\editor})\end{editor} (\year\uniq). <i>\title</i>\begin{edition} (\edition ed.)\end{edition}\begin{volume} (Vol. \volume)\end{volume}. \begin{address}\address:\end{address} \publisher. \begin{url} Retreived from \url\end{url}
+book=\begin{author}\format[Authors(LastFirst)]{\author}\end{author}\begin{editor}\format[Authors(LastFirst,Initials,Amp,7)]{\editor} (\format[IfPlural(Eds.,Ed.)]{\editor})\end{editor}. \year\uniq. <i>\title</i>\begin{edition} (\edition ed.)\end{edition}\begin{volume} (Vol. \volume)\end{volume}. \begin{address}\address:\end{address} \publisher.
 
-incollection=\format[Authors(LastFirst,Initials,Amp,7]{\author} (\year\uniq). \title. In \format[Authors(FirstFirst,Initials,Amp,7)]{\editor} (\format[IfPlural(Eds.,Ed.)]{\editor}), <i>\title</i>\begin{edition} (\edition ed.)\end{edition}\begin{volume} (Vol. \volume)\end{volume}. \begin{address}\address:\end{address} \publisher.
+incollection=\format[Authors(LastFirst,Initials,Amp,7]{\author}. \year\uniq. \title. In \format[Authors(FirstFirst,Initials,Amp,7)]{\editor} (\format[IfPlural(Eds.,Ed.)]{\editor}), <i>\title</i>\begin{edition} (\edition ed.)\end{edition}\begin{volume} (Vol. \volume)\end{volume} \begin{pages}(pp. \end{pages}\format[FormatPagesForHTML]{\pages}\begin{pages})\end{pages}. \begin{address}\address:\end{address} \publisher.
 
-inbook= \format[Authors(LastFirst,Initials,Amp,7]{\author} (\year\uniq). \chapter. In \format[Authors(FirstFirst,Initials,Amp,7)]{\editor} (Ed.), <i>\title</i>\begin{edition} (\edition ed.)\end{edition}\begin{volume} (Vol. \volume)\end{volume} (pp. \format[FormatPagesForHTML]{\pages}). \begin{address}\address:\end{address} \publisher.
-
-phdthesis=\format[Authors(LastFirst,Initials,Amp,7]{\author} (\year\uniq). <i>\title</i> (Doctoral Dissertation). Retrieved from \url
-
-mastersthesis=\format[Authors(LastFirst,Initials,Amp,7]{\author} (\year\uniq). <i>\title</i> (Master's Thesis). Retrieved from \url
-default=\format[Authors(LastFirst,Initials,Amp,7]{\author} (\year\uniq). \title. <i>\journal, \volume</i>\begin{number}(\number)\end{number}, \format[FormatPagesForHTML]{\pages}. \begin{doi}doi:\format[DOIStrip]{\doi}\end{doi}
+unpublished=\format[Authors(LastFirst,Initials,Amp,7]{\author} \year\uniq. \title. \note. \begin{doi}doi:\format[DOIStrip]{\doi}\end{doi}
