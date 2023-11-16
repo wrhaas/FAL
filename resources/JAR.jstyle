@@ -9,7 +9,7 @@ PROPERTIES
 Title=References Cited
 IsSortByPosition=false
 IsNumberEntries=false
-ReferenceParagraphFormat="JAR"
+ReferenceParagraphFormat="Hanging Indent"
 ReferenceHeaderParagraphFormat="Heading 1"
 
 CITATION
@@ -34,8 +34,6 @@ book=\format[AuthorLastFirstAbbreviator,NoSpaceBetweenAbbreviations,AuthorAndsCo
 incollection=\format[AuthorLastFirstAbbreviator,NoSpaceBetweenAbbreviations,AuthorAndsCommaReplacer,Replace( &,\, and)]{\author} (\year\uniq) \format[FormatChars]{\title}. In: \format[AuthorLastFirstAbbreviator,NoSpaceBetweenAbbreviations,AuthorAndsCommaReplacer,Replace( &,\, and)]{\editor} (Ed.), <i>\format[FormatChars]{\booktitle}</i>, \format[FormatChars]{\publisher}, \format[FormatChars]{\address}. \begin{doi}doi:\format[DOIStrip]{\doi}\end{doi}
 
 inbook=\format[AuthorLastFirstAbbreviator,NoSpaceBetweenAbbreviations,AuthorAndsCommaReplacer,Replace( &,\, and)]{\author} (\year\uniq). \format[FormatChars]{\chapter}. In: \format[AuthorLastFirstAbbreviator,NoSpaceBetweenAbbreviations,AuthorAndsCommaReplacer,Replace( &,\, and)]{\editor} (Ed.), <i>\format[FormatChars]{\title}</i>, \format[FormatChars]{\publisher}, \format[FormatChars]{\address}. \begin{doi}doi:\format[DOIStrip]{\doi}\end{doi}
-
-unpublished=\format[AuthorLastFirstAbbreviator,NoSpaceBetweenAbbreviations,AuthorAndsCommaReplacer,Replace( &,\, and)]{\author} (\format[FormatChars]{\year}\uniq) \format[FormatChars]{\title}. \note.
 
 default=\format[AuthorLastFirstAbbreviator,NoSpaceBetweenAbbreviations,AuthorAndsCommaReplacer,Replace( &,\, and)]{\author} (\year\uniq) \format[FormatChars]{\title}. \journal, \volume, \format[FormatPagesForHTML]{\pages}.
 

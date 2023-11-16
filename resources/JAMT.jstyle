@@ -9,7 +9,7 @@ PROPERTIES
 Title=References
 IsSortByPosition=false
 IsNumberEntries=false
-ReferenceParagraphFormat="JAMT"
+ReferenceParagraphFormat="Hanging Indent"
 ReferenceHeaderParagraphFormat="Heading 1"
 
 CITATION
@@ -35,7 +35,6 @@ incollection=\format[AuthorLastFirstAbbreviator,NoSpaceBetweenAbbreviations,Auth
 
 inbook=\format[AuthorLastFirstAbbreviator,NoSpaceBetweenAbbreviations,AuthorAndsCommaReplacer,Replace( \, &)]{\author} (\year\uniq). \format[FormatChars]{\chapter}. In \format[AuthorLastFirstAbbreviator,NoSpaceBetweenAbbreviations,AuthorAndsCommaReplacer,Replace( \, &)]{\editor} (Eds.), <i>\format[FormatChars]{\title}</i>  (pp. \format[FormatPagesForHTML]{\pages}). \format[FormatChars]{\publisher}. \begin{doi} https://doi.org/\format[DOIStrip]{\doi}\end{doi}
 
-unpublished=\format[AuthorLastFirstAbbreviator,NoSpaceBetweenAbbreviations,AuthorAndsCommaReplacer,Replace( \, &)]{\author} (\format[FormatChars]{\year}\uniq). \format[FormatChars]{\title}. \note.
+default=\format[AuthorLastFirstAbbreviator,NoSpaceBetweenAbbreviations,AuthorAndsCommaReplacer,Replace( \, &)]{\author} (\format[FormatChars]{\year}\uniq). \format[FormatChars]{\title}. \note.
 
-default=\format[AuthorLastFirstAbbreviator,NoSpaceBetweenAbbreviations,AuthorAndsCommaReplacer,Replace( \, &)]{\author} (\year\uniq). \format[FormatChars]{\title}. \journal, \volume, \format[FormatPagesForHTML]{\pages}.
 

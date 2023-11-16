@@ -1,0 +1,47 @@
+#Journal of Archaeological Science journals jstyle file by Randy Haas 2023
+NAME
+JAS author-year citation
+
+JOURNALS
+Journal of Archaeological Science
+Journal of Archaeological Science: Reports
+
+PROPERTIES
+Title="References Cited"
+IsSortByPosition="false"
+IsNumberEntries="false"
+ReferenceParagraphFormat="Hanging indent"
+ReferenceHeaderParagraphFormat="Heading 1"
+
+CITATION
+AuthorField="author/editor"
+YearField="year"
+MaxAuthors="2"
+MaxAuthorsFirst="2"
+AuthorSeparator=", "
+AuthorLastSeparator=" and "
+AuthorLastSeparatorInText= " and "
+EtAlString=" et al."
+YearSeparator=" "
+InTextYearSeparator=" "
+BracketBefore="("
+BracketAfter=")"
+BracketBeforeInList="("
+BracketAfterInList=")"
+CitationSeparator="; "
+UniquefierSeparator=","
+GroupedNumbersSeparator="-"
+MinimumGroupingCount="2"
+FormatCitations="false"
+CitationCharacterFormat="Text Body"
+MultiCiteChronological="false"
+PageInfoSeparator=": "
+
+LAYOUT
+article=\format[Authors(LastFirst,InitialsNoSpace,LastSep= , )]{\author}, \year\uniq. \title. \journal \volume\begin{pages}, \end{pages}\format[FormatPagesForHTML]{\pages}. \begin{doi}doi:\format[DOIStrip]{\doi}\end{doi}
+
+book=\begin{author}\format[Authors(LastFirst,InitialsNoSpace,LastSep= , )]{\author}\end{author}\begin{editor}\format[Authors(LastFirst,InitialsNoSpace,LastSep= , )]{\editor}(\format[IfPlural(Eds.,Ed.)]{\editor})\end{editor}, \year\uniq. \title\begin{edition} (\edition ed.)\end{edition}\begin{volume} (Vol. \volume)\end{volume}.\begin{publisher} \publisher,\end{publisher}\begin{address} \address\end{address}.
+
+incollection=\format[Authors(LastFirst,InitialsNoSpace,LastSep= , )]{\author}, \year\uniq. \title. In \format[Authors(LastFirst,InitialsNoSpace,LastSep= , )]{\editor} (\format[IfPlural(Eds.,Ed.)]{\editor}), \title\begin{edition} (\edition ed.)\end{edition}\begin{volume} (Vol. \volume)\end{volume} \begin{pages}(pp. \end{pages}\format[FormatPagesForHTML]{\pages}\begin{pages})\end{pages}.\begin{publisher} \publisher,\end{publisher}\begin{address} \address\end{address}.
+
+default=\format[Authors(LastFirst,InitialsNoSpace,LastSep= , )]{\author}, \year\uniq. \title. \note. \begin{doi}doi:\format[DOIStrip]{\doi}\end{doi}
