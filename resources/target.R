@@ -1,6 +1,6 @@
-#Atlatl target for Atlatl technology promoted sex equity in early forager societies
-#Randy Haas
-setwd("/home/whaas/Research/AtlatlAthelete/")
+#Target for experimental projectile research
+#Please cite Haas 2024, PaleoAmerica https://doi.org/10.1080/20555563.2024.2434360
+setwd("")
 library(plotrix)
 library(terra) #for halo text
 diameter<-76
