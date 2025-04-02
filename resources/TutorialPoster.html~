@@ -1,0 +1,36 @@
+<h1>How to draft a professional archaeology poster using LibreOffice Impress</h1>
+
+<p>Poster presentations offer one important way of sharing archaeological findings and soliciting feedback on early stage research. This tutorial presents a practical method along with some tips and tricks for drafting a professional poster using free, open-source software.
+</p>
+
+<h2>Materials</h2>
+<p>
+  To complete this tutorial, you will need a computer with LibreOffice installed. LibreOffice is available for Windows, Mac, and Linux operating systems. Follow the installation instructions provided on the <a href="https://www.libreoffice.org/" target="_blank">LibreOffice</a> website. Instructions will vary by operating system and version. This tutorial is based on LibreOffice version 7.5.0. This tutorial is furthermore produced on linux <a href="https://ubuntu.com/" target="_blank">Ubuntu</a> 20.04 operating system, which may entail small (but sometimes frustrating) differences for users working with Mac or Windows operating systems.
+</p>
+<p>
+  Because effective posters also require high-quality imagery and graphics, I recommend that you complete the Forager Lab's <a href="https://www.foragerarchaeology.org/resources/TutorialImageEditing.html" target="_blank">Basic image editing with Gimp</a> tutorial as a compliment to this tutorial. If you wish to include high-quality data visualizations, consider visiting the Forager Lab's  <a href="https://www.foragerarchaeology.org/resources/TutorialStatisticalProgramming.html" target="_blank">Basic statistical programming with R tuorial</a>.
+</p>
+
+<h2>Procedure</h2>
+<p>
+  This procedure will guide you through the process of creating a professional research poster. Your product will look as follows. Not only will you be able to use this product as a template for poster production but also you will gain the skills to edit the poster parameters to fit your needs or stylistic preferences.
+</p>
+<ol>
+  <li><b>Open LibreOffice</b></li>
+  <li><b>Create your poster</b>&ndash;In the menu bar, click File>New>Presentation to open a blank presentation document. You can also just click the Impress Presentation shortcut button, which should be on the left side of the screen.</li>
+  <li>When the new document opens, you may see a "Select a Template" screen. Close it.</li>
+  <li><b>Set your poster size</b> to the physical size that you want your poster to be. Some poster sessions will specify maximum poster dimensions. Moreover, poster printers often have a width limitation, typically 48" (4 ft). I recommend a landscape oriented poster that is 48" wide x 36" tall. This is large enough to allow for font and graphics sizes that can be viewed at a distance but within the common size constraints of poster sessions.
+    <ol>
+      <li>In the menu bar, click Slide>Slide Properties.</li>
+      <li>In the Slide tab, set the Width to 48" and the Height to 36".</li>
+      <li>Enter.</li>
+    </ol>
+  <li><b>Clean your slate.</b> By default, Impress creates text entry boxes on your slide. Remove these be either selecting and deleting them or by clicking on the blank layout in the Layouts window (if you don't see it on the side of your screen, click View>Sidebar in the menu toolbar.) Your blank poster should look as follows.
+  <image src="TutorialPoster/blankPoster.png" alt="blank poster"></li>
+  
+    
+    
+
+
+
+
