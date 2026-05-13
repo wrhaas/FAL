@@ -31,7 +31,7 @@ book=\begin{author}\format[Authors(FirstLast,Fullname)]{\author}\end{author}\beg
 
 incollection=\format[Authors(FirstLast,Fullname)]{\author} "\title," in <i>\Booktitle</i>\begin{edition} (\edition ed.)\end{edition}\begin{volume} (Vol. \volume)\end{volume}, \format[Authors(FirstLast,Fullname]){\editor}, (\format[IfPlural(Eds.,Ed.)]{\editor})\end{editor} (\publisher, \year\uniq) pp. \format[FormatPagesForHTML]{\pages}. \begin{doi}doi:\format[DOIStrip]{\doi}\end{doi}
 
-inbook= \format[Authors(FirstLast,Fullname)]{\author} "\chapter", in <i>\Booktitle</i>\begin{edition} (\edition ed.)\end{edition}\begin{volume} (Vol. \volume)\end{volume}, \format[Authors(FirstLast,Fullname]){\editor}, (\format[IfPlural(Eds.,Ed.)]{\editor})\end{editor} (\publisher, \year\uniq) pp. \format[FormatPagesForHTML]{\pages}. \begin{doi}doi:\format[DOIStrip]{\doi}\end{doi}
+inbook=\format[Authors(FirstLast,Fullname)]{\author} "\chapter", in <i>\Booktitle</i>\begin{edition} (\edition ed.)\end{edition}\begin{volume} (Vol. \volume)\end{volume}, \format[Authors(FirstLast,Fullname]){\editor}, (\format[IfPlural(Eds.,Ed.)]{\editor})\end{editor} (\publisher, \year\uniq) pp. \format[FormatPagesForHTML]{\pages}. \begin{doi}doi:\format[DOIStrip]{\doi}\end{doi}
 
 unpublished=\format[Authors(FirstLast,FullName)]{\author} <i>\title</i>. \note (\year\uniq).
 

@@ -9,13 +9,14 @@ PROPERTIES
 Title=References
 IsSortByPosition=false
 IsNumberEntries=false
-ReferenceParagraphFormat="Hanging Indent"
+ReferenceParagraphFormat="Hanging indent"
 ReferenceHeaderParagraphFormat="Heading 1"
 
 CITATION
 AuthorField=author/editor
 YearField=year
 MaxAuthors=2
+MaxAuthorsFirst=2
 AuthorSeparator=, 
 AuthorLastSeparator= & 
 EtAlString= et al.
@@ -24,7 +25,8 @@ InTextYearSeparator=
 BracketBefore=(
 BracketAfter=)
 CitationSeparator=; 
-UniquefierSeparator=, 
+UniquefierSeparator=,
+PageInfoSeparator=, p. 
 
 LAYOUT
 article=\format[AuthorLastFirstAbbreviator,NoSpaceBetweenAbbreviations,AuthorAndsCommaReplacer,Replace( \, &)]{\author} (\format[FormatChars]{\year}\uniq). \format[FormatChars]{\title}. <i>\journal</i>, \volume, \format[FormatPagesForHTML]{\pages}. \begin{doi}https://doi.org/\format[DOIStrip]{\doi}\end{doi}

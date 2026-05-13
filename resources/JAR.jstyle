@@ -9,13 +9,14 @@ PROPERTIES
 Title=References Cited
 IsSortByPosition=false
 IsNumberEntries=false
-ReferenceParagraphFormat="Hanging Indent"
+ReferenceParagraphFormat="Hanging indent"
 ReferenceHeaderParagraphFormat="Heading 1"
 
 CITATION
 AuthorField=author/editor
 YearField=year
 MaxAuthors=6
+MaxAuthorsFirst=6
 AuthorSeparator=, 
 AuthorLastSeparator= and 
 EtAlString= et al.
